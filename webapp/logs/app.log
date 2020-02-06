@@ -1,0 +1,92 @@
+TIMESTAMP: 2020-02-02T03:10:43.280Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot find module './src/api/image'
+Error: Cannot find module './src/api/image'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/app.js:6:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-02T03:10:57.338Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot find module './src/api/image'
+Error: Cannot find module './src/api/image'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/app.js:6:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-02T03:13:06.264Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-02T03:13:06.578Z, LEVEL:  error, MESSAGE: 	duplicate key value violates unique constraint "appusers_emailaddress_key"
+TIMESTAMP: 2020-02-02T03:13:33.300Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-02T03:14:51.174Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-02T03:14:59.218Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-02T03:15:11.111Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-02T03:15:45.098Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-02T03:16:41.351Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-02T03:16:41.356Z, LEVEL:  error, MESSAGE: 	relation "images" does not exist
+TIMESTAMP: 2020-02-02T03:18:29.200Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-02T03:18:29.261Z, LEVEL:  error, MESSAGE: 	uncaughtException: imageResult is not defined
+ReferenceError: imageResult is not defined
+    at Query.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/src/api/recipe.js:381:52)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-02T03:18:50.102Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-02T03:27:08.241Z, LEVEL:  info, MESSAGE: 	get new recipe call
+TIMESTAMP: 2020-02-02T03:31:48.711Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-02T03:32:43.057Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:470:11)
+    at ServerResponse.header (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/express/lib/response.js:267:15)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/src/api/recipe.js:154:77)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/pg/lib/connection.js:134:12)
+TIMESTAMP: 2020-02-02T03:33:48.409Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3005
+Error: listen EADDRINUSE: address already in use :::3005
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/app.js:17:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-02T03:34:10.472Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3005
+Error: listen EADDRINUSE: address already in use :::3005
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/app.js:17:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/ccwebapp/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-02T03:34:52.726Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-02T03:35:23.372Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-02T03:35:55.984Z, LEVEL:  error, MESSAGE: 	Unauthorized : Invalid emailaddress
+TIMESTAMP: 2020-02-02T03:37:07.313Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-02T03:37:28.262Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-02T03:37:43.091Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-02T03:37:43.269Z, LEVEL:  info, MESSAGE: 	get recipe call
