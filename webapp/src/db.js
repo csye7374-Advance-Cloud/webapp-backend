@@ -61,13 +61,48 @@ client.connect(function (err) {
                             return console.error('Error running create table query', err);
                         } else {
                             console.log("Successfully created recipe table.");
+                            client.query(
+                                'CREATE TABLE IF NOT EXISTS NUTRITION( \
+                                 recipe_id VARCHAR(36) PRIMARY KEY, \
+                                 FOREIGN KEY(recipe_id) REFERENCES RECIPE(recipe_id), \
+                                 calories int NOT NULL,\
+                                 cholesterol_in_mg FLOAT NOT NULL, \
+                                 sodium_in_mg int NOT NULL,\
+                                 carbohydrates_in_grams FLOAT NOT NULL, \
+                                 protein_in_grams FLOAT NOT NULL\
+                                );',
 
+
+                                function (err, result) {
+                                    if (err) {
+                                        return console.error('Error running create table query', err);
+                                    } else {
+                                        console.log("Successfully created nutrition table.");
+
+                                        client.query(
+                                            'CREATE TABLE IF NOT EXISTS ORDEREDLIST( \
+                                             id varchar(40) PRIMARY KEY, \
+                                             recipe_id VARCHAR(36), \
+                                             FOREIGN KEY(recipe_id) REFERENCES RECIPE(recipe_id), \
+                                             position int NOT NULL,\
+                                             instruction VARCHAR NOT NULL\
+                                             );',
+
+                                            function (err, result) {
+                                                if (err) {
+                                                    return console.error('Error running create table query', err);
+                                                } else {
+                                                    console.log("Successfully created instruction ordered list table.");
+                                                }
+                                            });
+                                    }
+                                });
                         }
                     });
-
             }
         });
 });
+
 
 module.exports = {
     connection: client
