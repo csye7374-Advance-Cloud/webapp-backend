@@ -10,3 +10,4 @@
 |Prajesh Jain| 001409343| Jain.pra@husky.neu.edu|
 
 `docker run --network=host -it -p 3000:3000 docker_image_name`
+
