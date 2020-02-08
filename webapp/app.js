@@ -10,9 +10,9 @@ dotenv.config();
 const PORT = process.env.PORT;
 app.use(bodyParser.json())
 app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
+    bodyParser.urlencoded({
+      extended: true,
+    })
 )
 app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}.`);
@@ -27,7 +27,7 @@ app.delete('/v1/recipe/:id', recipe.deleteRecipe);
 app.delete('/v1/recipe/', recipe.deleteRecipe);
 
 app.put('/v1/recipe/:id', recipe.updateRecipe);
-//app.get('/v1/recipe/', recipe.getRecipe);
+app.get('/v1/allrecipes/', recipe.getAllRecipes);
 app.get('/v1/recipes/', recipe.getNewRecipe);
 app.get('/v1/recipe/:id', recipe.getRecipe);
 
