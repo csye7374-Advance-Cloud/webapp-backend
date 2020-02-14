@@ -141,7 +141,37 @@ const deleteRecipe = (request, response) => {
                             if (user_id === result.rows[0].author_id) {
                                 if (result.rows[0] != null) {
                                     console.log("Result " + result.rows[0]);
+                                    database.query('select * from IMAGES where recipe_id = $1', [id], function (err, imgresult) {
+                                        if (err) {
+                                            logger.error(err);
+                                            return response.status(404).json({
+                                                info: 'sql error'
+                                            })
+                                        } else {
+                                            if (imgresult.rows.length > 0) {
+                                                imgresult.rows.forEach(function (img) {
+                                                    const params = {
+                                                        Bucket: S3_BUCKET_NAME,
+                                                        Key: "images/" + img.id
+                                                    };
+                                                    s3.deleteObject(params, function (err, data) {
+                                                        if (err) {
+                                                            logger.error(err);
+                                                            return response.status(500).send({
+                                                                error: 'Error deleting the file from storage system'
+                                                            });
+                                                        }
+                                                        console.log('File deleted successfully from S3 bucket.');
+                                                        return response.status(204).end();
+                                                    });
+
+                                                });
+
+                                            }
+                                        }
+                                    })
                                     database.query('DELETE FROM ORDEREDLIST WHERE recipe_id = $1 ', [id]),
+                                        database.query('DELETE FROM IMAGES where recipe_id = $1', [id]),
                                         database.query('DELETE FROM NUTRITION WHERE recipe_id = $1 ', [id]),
                                         database.query('DELETE FROM RECIPE WHERE recipe_id = $1 ', [id], function (err, result) {
                                             if (err) {
@@ -372,12 +402,22 @@ const getRecipe = (request, response) => {
                                             error: 'Error getting recipe'
                                         });
                                     } else {
+                                        database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
+                                            if (err) {
+                                                logger.error(err);
+                                                return response.status(500).send({
+                                                    error: 'Error getting images data'
+                                                });
+                                            }
 
-                                        return response.status(200).json({
-                                            info: recipeResult.rows[0],
-                                            steps: resultSteps.rows,
-                                            nutrition_information: resultNutrition.rows[0]
-                                        });
+                                            return response.status(200).json({
+                                                image: imageResult.rows,
+                                                info: recipeResult.rows[0],
+                                                steps: resultSteps.rows,
+                                                nutrition_information: resultNutrition.rows[0]
+                                            });
+                                        })
+
                                     }
                                 });
                             }
@@ -424,11 +464,21 @@ const getNewRecipe = (request, response) => {
                                         error: 'Error getting recipe'
                                     });
                                 } else {
-                                    return response.status(200).json({
-                                        info: recipeResult.rows[0],
-                                        steps: resultSteps.rows,
-                                        nutrition_information: resultNutrition.rows[0]
-                                    });
+                                    database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
+                                        if (err) {
+                                            logger.error(err);
+                                            return response.status(500).send({
+                                                error: 'Error getting images data'
+                                            });
+                                        }
+                                        return response.status(200).json({
+                                            image: imageResult.rows,
+                                            info: recipeResult.rows[0],
+                                            steps: resultSteps.rows,
+                                            nutrition_information: resultNutrition.rows[0]
+                                        });
+                                    })
+
                                 }
                             });
                         }
@@ -455,10 +505,10 @@ const getAllRecipes = (request, response) => {
                 });
             } else {
                 if (recipeResult.rows.length > 0) {
-                    var data =[];
+                    var data = [];
 
 
-                    recipeResult.rows.forEach((recipe, index, array) =>{
+                    recipeResult.rows.forEach((recipe, index, array) => {
                         recipe.ingredients = JSON.parse(recipe.ingredients);
                         database.query("select position, instruction from orderedlist where recipe_id = $1", [recipe.recipe_id], function (err, resultSteps) {
                             if (err) {
@@ -474,7 +524,7 @@ const getAllRecipes = (request, response) => {
                                             error: 'Error getting recipe'
                                         });
                                     } else {
-                                        let jsonData={
+                                        let jsonData = {
                                             info: recipe,
                                             steps: resultSteps.rows,
                                             nutrition_information: resultNutrition.rows[0]
@@ -482,7 +532,7 @@ const getAllRecipes = (request, response) => {
                                         data.push(
                                             jsonData
                                         );
-                                        if(index === array.length-1){
+                                        if (index === array.length - 1) {
                                             return response.status(200).json(data);
                                         }
                                     }
