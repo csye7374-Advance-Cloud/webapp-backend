@@ -5,9 +5,11 @@ const api = require('./src/api/api');
 const recipe = require('./src/api/recipe');
 const dotenv = require('dotenv');
 const logger = require('./config/winston');
+let cors = require('cors');
 
 dotenv.config();
 const PORT = process.env.PORT;
+app.use(cors());
 app.use(bodyParser.json())
 app.use(
     bodyParser.urlencoded({
