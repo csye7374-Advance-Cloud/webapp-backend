@@ -10,6 +10,7 @@ let cors = require('cors');
 
 dotenv.config();
 const PORT = process.env.PORT;
+app.use(cors());
 app.use(bodyParser.json())
 app.use(
   bodyParser.urlencoded({
