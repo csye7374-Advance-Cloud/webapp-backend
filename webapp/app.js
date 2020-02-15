@@ -3,16 +3,19 @@ const bodyParser = require('body-parser');
 const app = express();
 const api = require('./src/api/api');
 const recipe = require('./src/api/recipe');
+const image = require('./src/api/image');
 const dotenv = require('dotenv');
 const logger = require('./config/winston');
+let cors = require('cors');
 
 dotenv.config();
 const PORT = process.env.PORT;
+app.use(cors());
 app.use(bodyParser.json())
 app.use(
-    bodyParser.urlencoded({
-      extended: true,
-    })
+  bodyParser.urlencoded({
+    extended: true,
+  })
 )
 app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}.`);
@@ -31,6 +34,10 @@ app.get('/v1/allrecipes/', recipe.getAllRecipes);
 app.get('/v1/recipes/', recipe.getNewRecipe);
 app.get('/v1/recipe/:id', recipe.getRecipe);
 
+// API's for Images
+app.get('/v1/recipe/:recipeId/image/:imageId', image.getImage);
+app.post('/v1/recipe/:recipeId/image', image.uploadImage);
+app.delete('/v1/recipe/:recipeId/image/:imageId', image.deleteImage);
 
 
 app.get('/howyoudoin', (request, response) => {

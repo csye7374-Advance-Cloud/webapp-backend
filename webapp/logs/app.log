@@ -90,3 +90,140 @@ TIMESTAMP: 2020-02-02T03:37:07.313Z, LEVEL:  info, MESSAGE: 	create recipe call
 TIMESTAMP: 2020-02-02T03:37:28.262Z, LEVEL:  info, MESSAGE: 	update recipe call
 TIMESTAMP: 2020-02-02T03:37:43.091Z, LEVEL:  info, MESSAGE: 	update recipe call
 TIMESTAMP: 2020-02-02T03:37:43.269Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-11T19:23:51.478Z, LEVEL:  error, MESSAGE: 	uncaughtException: image is not defined
+ReferenceError: image is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:35:48)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:831:12)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-cli/lib/_babel-node.js:154:22)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+TIMESTAMP: 2020-02-11T19:32:03.180Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-11T19:34:06.954Z, LEVEL:  info, MESSAGE: 	User GET Call
+TIMESTAMP: 2020-02-11T19:34:26.056Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-11T19:35:48.440Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-11T19:35:49.134Z, LEVEL:  error, MESSAGE: 	The specified bucket does not exist
+TIMESTAMP: 2020-02-12T05:35:04.782Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:18:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-12T05:35:23.587Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:18:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-12T21:39:22.594Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-12T21:39:33.034Z, LEVEL:  info, MESSAGE: 	User GET Call
+TIMESTAMP: 2020-02-12T21:39:43.064Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-12T21:40:03.386Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:40:04.082Z, LEVEL:  error, MESSAGE: 	Access Denied
+TIMESTAMP: 2020-02-12T21:42:23.157Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:42:23.728Z, LEVEL:  error, MESSAGE: 	Access Denied
+TIMESTAMP: 2020-02-12T21:43:14.319Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-12T21:43:38.203Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:43:38.940Z, LEVEL:  error, MESSAGE: 	Access Denied
+TIMESTAMP: 2020-02-12T21:52:35.931Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:18:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-12T21:53:37.155Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:18:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-12T21:54:27.052Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-12T21:54:27.641Z, LEVEL:  error, MESSAGE: 	duplicate key value violates unique constraint "appusers_emailaddress_key"
+TIMESTAMP: 2020-02-12T21:54:33.011Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-12T21:54:45.773Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:18.625Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:21.210Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:23.114Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:25.093Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:27.137Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:29.023Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:31.500Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:55:38.185Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-12T21:56:23.754Z, LEVEL:  info, MESSAGE: 	Delete Image
+TIMESTAMP: 2020-02-12T21:56:23.787Z, LEVEL:  error, MESSAGE: 	Unauthorized : Invalid emailaddress
+TIMESTAMP: 2020-02-12T21:56:46.142Z, LEVEL:  info, MESSAGE: 	Delete Image
+TIMESTAMP: 2020-02-12T22:12:15.516Z, LEVEL:  error, MESSAGE: 	uncaughtException: Connection terminated unexpectedly
+Error: Connection terminated unexpectedly
+    at Connection.con.once (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/pg/lib/client.js:255:9)
+    at Object.onceWrapper (events.js:286:20)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/pg/lib/connection.js:139:10)
+    at Socket.emit (events.js:203:15)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+TIMESTAMP: 2020-02-12T22:15:26.762Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:18:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-12T22:15:26.773Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:18:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-12T22:15:26.853Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/final/webapp/app.js:18:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)

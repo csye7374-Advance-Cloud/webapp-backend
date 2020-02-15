@@ -9,11 +9,15 @@ const {
     DB_PASSWORD,
     DB_PORT,
     DB_SCHEMA,
+    RDS_USER_NAME,
+    RDS_PASSWORD,
+    RDS_DB_NAME,
+    RDS_CONNECTION_STRING
 } = process.env;
 
-const connectionString = process.env.DATABASE_URL || `postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_SCHEMA}`;
+//const connectionString = process.env.DATABASE_URL || `postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_SCHEMA}`;
 
-//const connectionString = process.env.DATABASE_URL || `postgres://${RDS_USER_NAME}:${RDS_PASSWORD}@${RDS_CONNECTION_STRING}:5432/${RDS_DB_NAME}`;
+const connectionString = process.env.DATABASE_URL || `postgres://${RDS_USER_NAME}:${RDS_PASSWORD}@${RDS_CONNECTION_STRING}:5432/${RDS_DB_NAME}`;
 console.log(connectionString);
 const client = new Client(connectionString);
 
@@ -93,6 +97,23 @@ client.connect(function (err) {
                                                     return console.error('Error running create table query', err);
                                                 } else {
                                                     console.log("Successfully created instruction ordered list table.");
+                                                    client.query(
+                                                        'CREATE TABLE IF NOT EXISTS IMAGES( \
+                                                         id VARCHAR(36) PRIMARY KEY, \
+                                                         recipe_id VARCHAR(36), \
+                                                         FOREIGN KEY(recipe_id) REFERENCES RECIPE(recipe_id), \
+                                                         url TEXT NOT NULL, \
+                                                         content_length VARCHAR(10), \
+                                                         last_modified timestamp NOT NULL \
+                                                         );',
+                                                        function (err, result) {
+                                                            if (err) {
+                                                                return console.error('Error running create images query', err);
+                                                            } else {
+                                                                console.log("Successfully created images table.");
+
+                                                            }
+                                                        });
                                                 }
                                             });
                                     }
