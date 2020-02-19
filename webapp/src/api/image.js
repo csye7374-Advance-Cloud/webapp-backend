@@ -26,6 +26,9 @@ function getMD5HashFromFile(file) {
 }
 
 // Create an S3 client
+var credentials = new AWS.SharedIniFileCredentials({profile: 'dev'});
+AWS.config.credentials = credentials;
+console.log("credentials of the AWS :-" +credentials);
 var s3 = new AWS.S3();
 
 const uploadImage = (request, response) => {
