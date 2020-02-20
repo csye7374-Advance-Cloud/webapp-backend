@@ -11,9 +11,21 @@ const logger = require('../../config/winston');
 
 dotenv.config();
 const {
-    S3_BUCKET_NAME
+    S3_BUCKET_NAME,
+    AWS_KEY,
+    SECRET_KEY,
+    REGION
 } = process.env;
+
+AWS.config.update({
+    accessKeyId: AWS_KEY,
+    secretAccessKey: SECRET_KEY,
+
+})
 console.log("Bucket Name:", S3_BUCKET_NAME);
+console.log("AWS Name:", AWS_KEY);
+console.log("SECRET Name:", SECRET_KEY);
+console.log("Region Name:", REGION);
 const ACCEPTABLE_FILE_FORMATS = ['image/jpeg', 'image/png', 'image/jpg'];
 const ACCEPTABLE_FILE_SIZE_BYTES = 5 * 100000; // 500 KBs
 
@@ -26,10 +38,9 @@ function getMD5HashFromFile(file) {
 }
 
 // Create an S3 client
-var credentials = new AWS.SharedIniFileCredentials({profile: 'dev'});
-AWS.config.credentials = credentials;
-console.log("credentials of the AWS :-" +credentials);
+
 var s3 = new AWS.S3();
+
 
 const uploadImage = (request, response) => {
     logger.info("Image Upload");
