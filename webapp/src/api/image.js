@@ -156,14 +156,17 @@ const getImage = (request, response) => {
                     let params = {
                         Bucket: S3_BUCKET_NAME,
                         Expires: 120, //seconds
-                        Key: imageResult.rows[0].url
+                        Key: "images/"+imageResult.rows[0].id,
+
                     };
+                    console.log("Keys" +Key);
                     s3.getSignedUrl('getObject', params, (err, data) =>{
                         console.log(data);
+
                         console.log(imageResult.rows[0])
                         return response.status(200).json({
                             image: {
-                                id: imageResult.rows[0].imageId,
+                                id: imageResult.rows[0].id,
                                 url: data
                             }
                             });
@@ -215,7 +218,9 @@ const deleteImage = (request, response) => {
                                     }
                                     s3.deleteObject(params, function (err, data) {
                                         if (err) {
+                                            console.log(err);
                                             return response.status(500).send({
+
                                                 error: 'Error deleting the file from storage system'
                                             });
                                         }
