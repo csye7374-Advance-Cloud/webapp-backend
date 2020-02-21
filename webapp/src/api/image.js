@@ -11,8 +11,17 @@ const logger = require('../../config/winston');
 
 dotenv.config();
 const {
-    S3_BUCKET_NAME
+    S3_BUCKET_NAME,
+    AWS_KEY,
+    SECRET_KEY,
+    REGION
 } = process.env;
+
+AWS.config.update({
+    accessKeyId: AWS_KEY,
+    secretAccessKey: SECRET_KEY,
+    region: REGION
+});
 console.log("Bucket Name:", S3_BUCKET_NAME);
 const ACCEPTABLE_FILE_FORMATS = ['image/jpeg', 'image/png', 'image/jpg'];
 const ACCEPTABLE_FILE_SIZE_BYTES = 5 * 100000; // 500 KBs
@@ -26,7 +35,9 @@ function getMD5HashFromFile(file) {
 }
 
 // Create an S3 client
+
 var s3 = new AWS.S3();
+
 
 const uploadImage = (request, response) => {
     logger.info("Image Upload");
@@ -141,8 +152,25 @@ const getImage = (request, response) => {
                         error: 'Error getting recipe'
                     });
                 } else {
-                    return response.status(200).json(imageResult.rows[0]);
-                }
+                    let params = {
+                        Bucket: S3_BUCKET_NAME,
+                        Expires: 120, //seconds
+                        Key: "images/"+imageResult.rows[0].id
+
+                    };
+                    console.log("Keys" +params.Key);
+                    s3.getSignedUrl('getObject', params, (err, data) =>{
+                        console.log(data);
+
+                        console.log(imageResult.rows[0])
+                        return response.status(200).json({
+                            image: {
+                                id: imageResult.rows[0].id,
+                                url: data
+                            }
+                            });
+                    });
+                    }
 
             });
     } else {
@@ -189,7 +217,9 @@ const deleteImage = (request, response) => {
                                     }
                                     s3.deleteObject(params, function (err, data) {
                                         if (err) {
+                                            console.log(err);
                                             return response.status(500).send({
+
                                                 error: 'Error deleting the file from storage system'
                                             });
                                         }
