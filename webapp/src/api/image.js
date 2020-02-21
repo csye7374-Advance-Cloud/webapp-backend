@@ -12,18 +12,18 @@ const logger = require('../../config/winston');
 dotenv.config();
 const {
     S3_BUCKET_NAME,
-    AWS_KEY,
-    SECRET_KEY,
-    REGION
+    AWS_KEY
 } = process.env;
 
-AWS.config.update({
-    region: REGION
-});
+// AWS.config.update({
+//     accessKeyId: AWS_KEY,
+//     secretAccessKey: SECRET_KEY,
+//     region: REGION
+// });
 console.log("Bucket Name:", S3_BUCKET_NAME);
-console.log("AWS Name:", AWS_KEY);
-console.log("SECRET Name:", SECRET_KEY);
-console.log("Region Name:", REGION);
+// console.log("AWS Name:", AWS_KEY);
+// console.log("SECRET Name:", SECRET_KEY);
+// console.log("Region Name:", REGION);
 const ACCEPTABLE_FILE_FORMATS = ['image/jpeg', 'image/png', 'image/jpg'];
 const ACCEPTABLE_FILE_SIZE_BYTES = 5 * 100000; // 500 KBs
 
@@ -156,17 +156,17 @@ const getImage = (request, response) => {
                     let params = {
                         Bucket: S3_BUCKET_NAME,
                         Expires: 120, //seconds
-                        Key: imageResult[0].id
+                        Key: "images/"+imageResult.rows[0].id
 
                     };
-                    console.log("Keys" +Key);
+                    console.log("Keys" +params.Key);
                     s3.getSignedUrl('getObject', params, (err, data) =>{
                         console.log(data);
 
                         console.log(imageResult.rows[0])
                         return response.status(200).json({
                             image: {
-                                id: imageResult[0].id,
+                                id: imageResult.rows[0].id,
                                 url: data
                             }
                             });

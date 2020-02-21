@@ -227,3 +227,129 @@ Error: listen EADDRINUSE: address already in use :::3000
     at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/final/webapp/node_modules/babel-register/lib/node.js:154:7)
     at Module.load (internal/modules/cjs/loader.js:653:32)
     at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-21T01:53:22.503Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-21T01:53:32.013Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-21T03:36:15.285Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js: Unexpected token, expected , (23:4)
+SyntaxError: /home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js: Unexpected token, expected , (23:4)
+[0m [90m 21 | [39m    accessKeyId[33m:[39m [33mAWS_KEY[39m
+ [90m 22 | [39m    
+[31m[1m>[22m[39m[90m 23 | [39m    region[33m:[39m [33mREGION[39m
+ [90m    | [39m    [31m[1m^[22m[39m
+ [90m 24 | [39m})[33m;[39m
+ [90m 25 | [39mconsole[33m.[39mlog([32m"Bucket Name:"[39m[33m,[39m [33mS3_BUCKET_NAME[39m)[33m;[39m
+ [90m 26 | [39mconsole[33m.[39mlog([32m"AWS Name:"[39m[33m,[39m [33mAWS_KEY[39m)[33m;[39m[0m
+    at Parser.pp$5.raise (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseObj (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3719:19)
+    at Parser.pp$3.parseExprSubscripts (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+TIMESTAMP: 2020-02-21T03:36:41.407Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js: Unexpected token, expected , (22:4)
+SyntaxError: /home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js: Unexpected token, expected , (22:4)
+[0m [90m 20 | [39m[33mAWS[39m[33m.[39mconfig[33m.[39mupdate({
+ [90m 21 | [39m    accessKeyId[33m:[39m [33mAWS_KEY[39m
+[31m[1m>[22m[39m[90m 22 | [39m    secretAccessKey[33m:[39m [33mSECRET_KEY[39m
+ [90m    | [39m    [31m[1m^[22m[39m
+ [90m 23 | [39m    region[33m:[39m [33mREGION[39m
+ [90m 24 | [39m})[33m;[39m
+ [90m 25 | [39mconsole[33m.[39mlog([32m"Bucket Name:"[39m[33m,[39m [33mS3_BUCKET_NAME[39m)[33m;[39m[0m
+    at Parser.pp$5.raise (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseObj (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3719:19)
+    at Parser.pp$3.parseExprSubscripts (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+TIMESTAMP: 2020-02-21T03:38:28.744Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-21T03:40:20.509Z, LEVEL:  error, MESSAGE: 	uncaughtException: AWS_KEY is not defined
+ReferenceError: AWS_KEY is not defined
+    at Object.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js:23:26)
+    at Module._compile (module.js:652:30)
+    at loader (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/app.js:6:15)
+TIMESTAMP: 2020-02-21T03:40:35.720Z, LEVEL:  error, MESSAGE: 	uncaughtException: SECRET_KEY is not defined
+ReferenceError: SECRET_KEY is not defined
+    at Object.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js:25:29)
+    at Module._compile (module.js:652:30)
+    at loader (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/app.js:6:15)
+TIMESTAMP: 2020-02-21T03:40:44.496Z, LEVEL:  error, MESSAGE: 	uncaughtException: SECRET_KEY is not defined
+ReferenceError: SECRET_KEY is not defined
+    at Object.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js:25:29)
+    at Module._compile (module.js:652:30)
+    at loader (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Module.require (module.js:596:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/app.js:6:15)
+TIMESTAMP: 2020-02-21T03:41:10.681Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-21T03:41:36.500Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-21T03:41:36.595Z, LEVEL:  error, MESSAGE: 	duplicate key value violates unique constraint "appusers_emailaddress_key"
+TIMESTAMP: 2020-02-21T03:41:42.481Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-21T03:42:27.038Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-21T03:42:51.873Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-21T03:44:46.404Z, LEVEL:  info, MESSAGE: 	Get Image
+TIMESTAMP: 2020-02-21T03:44:46.421Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot read property 'url' of undefined
+TypeError: Cannot read property 'url' of undefined
+    at Query.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js:159:45)
+    at Query.handleReadyForQuery (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at emitOne (events.js:116:13)
+    at Connection.emit (events.js:211:7)
+    at Socket.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+TIMESTAMP: 2020-02-21T03:45:25.232Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-21T03:45:30.456Z, LEVEL:  info, MESSAGE: 	Get Image
+TIMESTAMP: 2020-02-21T03:45:30.470Z, LEVEL:  error, MESSAGE: 	uncaughtException: Key is not defined
+ReferenceError: Key is not defined
+    at Query.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js:162:41)
+    at Query.handleReadyForQuery (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at emitOne (events.js:116:13)
+    at Connection.emit (events.js:211:7)
+    at Socket.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+TIMESTAMP: 2020-02-21T03:46:15.049Z, LEVEL:  info, MESSAGE: 	Get Image
+TIMESTAMP: 2020-02-21T03:46:15.067Z, LEVEL:  error, MESSAGE: 	uncaughtException: Key is not defined
+ReferenceError: Key is not defined
+    at Query.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/src/api/image.js:162:41)
+    at Query.handleReadyForQuery (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at emitOne (events.js:116:13)
+    at Connection.emit (events.js:211:7)
+    at Socket.<anonymous> (/home/jagman/Documents/AdvanceCloud/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+TIMESTAMP: 2020-02-21T03:47:14.067Z, LEVEL:  info, MESSAGE: 	Get Image
+TIMESTAMP: 2020-02-21T03:48:03.426Z, LEVEL:  info, MESSAGE: 	Get Image
+TIMESTAMP: 2020-02-21T03:48:45.547Z, LEVEL:  info, MESSAGE: 	Get Image
