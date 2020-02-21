@@ -18,8 +18,6 @@ const {
 } = process.env;
 
 AWS.config.update({
-    accessKeyId: AWS_KEY,
-    secretAccessKey: SECRET_KEY,
     region: REGION
 });
 console.log("Bucket Name:", S3_BUCKET_NAME);
@@ -162,6 +160,7 @@ const getImage = (request, response) => {
                     };
                     s3.getSignedUrl('getObject', params, (err, data) =>{
                         console.log(data);
+                        console.log(imageResult.rows[0])
                         return response.status(200).json({
                             image: {
                                 id: imageResult.rows[0].imageId,
