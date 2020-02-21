@@ -18,6 +18,8 @@ const {
 } = process.env;
 
 AWS.config.update({
+    accessKeyId: AWS_KEY,
+    secretAccessKey: SECRET_KEY,
     region: REGION
 });
 console.log("Bucket Name:", S3_BUCKET_NAME);
