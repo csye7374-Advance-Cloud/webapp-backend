@@ -12,18 +12,18 @@ const logger = require('../../config/winston');
 dotenv.config();
 const {
     S3_BUCKET_NAME,
-    AWS_KEY
+    AWS_KEY,
+    SECRET_KEY,
+    REGION
 } = process.env;
 
-// AWS.config.update({
-//     accessKeyId: AWS_KEY,
-//     secretAccessKey: SECRET_KEY,
-//     region: REGION
-// });
+AWS.config.update({
+    region: REGION
+});
 console.log("Bucket Name:", S3_BUCKET_NAME);
-// console.log("AWS Name:", AWS_KEY);
-// console.log("SECRET Name:", SECRET_KEY);
-// console.log("Region Name:", REGION);
+console.log("AWS Name:", AWS_KEY);
+console.log("SECRET Name:", SECRET_KEY);
+console.log("Region Name:", REGION);
 const ACCEPTABLE_FILE_FORMATS = ['image/jpeg', 'image/png', 'image/jpg'];
 const ACCEPTABLE_FILE_SIZE_BYTES = 5 * 100000; // 500 KBs
 
