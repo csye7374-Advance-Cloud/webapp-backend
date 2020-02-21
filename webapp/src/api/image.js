@@ -20,8 +20,8 @@ const {
 AWS.config.update({
     accessKeyId: AWS_KEY,
     secretAccessKey: SECRET_KEY,
-
-})
+    region: REGION
+});
 console.log("Bucket Name:", S3_BUCKET_NAME);
 console.log("AWS Name:", AWS_KEY);
 console.log("SECRET Name:", SECRET_KEY);
@@ -155,8 +155,21 @@ const getImage = (request, response) => {
                         error: 'Error getting recipe'
                     });
                 } else {
-                    return response.status(200).json(imageResult.rows[0]);
-                }
+                    let params = {
+                        Bucket: S3_BUCKET_NAME,
+                        Expires: 120, //seconds
+                        Key: imageResult.rows[0].url
+                    };
+                    s3.getSignedUrl('getObject', params, (err, data) =>{
+                        console.log(data);
+                        return response.status(200).json({
+                            image: {
+                                id: imageResult.rows[0].imageId,
+                                url: data
+                            }
+                            });
+                    });
+                    }
 
             });
     } else {
