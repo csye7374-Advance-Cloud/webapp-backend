@@ -23,9 +23,6 @@ AWS.config.update({
     region: REGION
 });
 console.log("Bucket Name:", S3_BUCKET_NAME);
-console.log("AWS Name:", AWS_KEY);
-console.log("SECRET Name:", SECRET_KEY);
-console.log("Region Name:", REGION);
 const ACCEPTABLE_FILE_FORMATS = ['image/jpeg', 'image/png', 'image/jpg'];
 const ACCEPTABLE_FILE_SIZE_BYTES = 5 * 100000; // 500 KBs
 
