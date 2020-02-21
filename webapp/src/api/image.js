@@ -156,7 +156,7 @@ const getImage = (request, response) => {
                     let params = {
                         Bucket: S3_BUCKET_NAME,
                         Expires: 120, //seconds
-                        Key: "images/"+imageResult.rows[0].id,
+                        Key: imageResult[0].id
 
                     };
                     console.log("Keys" +Key);
@@ -166,7 +166,7 @@ const getImage = (request, response) => {
                         console.log(imageResult.rows[0])
                         return response.status(200).json({
                             image: {
-                                id: imageResult.rows[0].id,
+                                id: imageResult[0].id,
                                 url: data
                             }
                             });
