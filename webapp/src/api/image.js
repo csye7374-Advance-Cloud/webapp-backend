@@ -89,11 +89,24 @@ const uploadImage = (request, response) => {
                                                             Bucket: S3_BUCKET_NAME,
                                                             Key: "images/" + imageResult.rows[0].id
                                                         };
-                                                        s3.deleteObject(deleteParams, function (err, data) {
+                                                        database.query('DELETE FROM IMAGES WHERE id = $1 ', [imageResult.rows[0].id], function (err, result) {
                                                             if (err) {
-                                                                console.log(err);
+                                                                logger.error(err);
+                                                                return response.status(500).send({
+                                                                    error: 'Error deleting the file from DB'
+                                                                });
                                                             }
-                                                            console.log('File deleted successfully.');
+                                                            s3.deleteObject(deleteParams, function (err, data) {
+                                                                if (err) {
+                                                                    console.log(err);
+                                                                    return response.status(500).send({
+
+                                                                        error: 'Error deleting the file from storage system'
+                                                                    });
+                                                                }
+                                                                console.log('File deleted successfully.');
+
+                                                            });
                                                         });
                                                     }
                                                     var image_file = files.image;
@@ -180,6 +193,7 @@ const getImage = (request, response) => {
                         error: 'Error getting recipe'
                     });
                 } else {
+                    if (imageResult.rows.length > 0) {
                     let params = {
                         Bucket: S3_BUCKET_NAME,
                         Expires: 120, //seconds
@@ -198,7 +212,11 @@ const getImage = (request, response) => {
                             }
                         });
                     });
-                }
+                }else{
+                        return response.status(404).send({
+                            error: 'Image does not exist.'
+                        });
+                    }}
 
             });
     } else {
