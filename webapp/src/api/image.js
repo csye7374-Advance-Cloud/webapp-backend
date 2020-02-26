@@ -42,13 +42,13 @@ var s3 = new AWS.S3();
 const uploadImage = (request, response) => {
     logger.info("Image Upload");
     var recipe_id = request.params.recipeId;
-
+    // new code
     api.authPromise(request).then(
         function (user) {
             var user_id = user.id;
             database.query(
                 'SELECT author_id from RECIPE \
-        	where recipe_id = $1', [recipe_id],
+            where recipe_id = $1', [recipe_id],
                 function (err, recipeResult) {
                     if (err) {
                         logger.error(err);
@@ -71,55 +71,83 @@ const uploadImage = (request, response) => {
                                         });
                                     }
 
-                                    var image_file = files.image;
-                                    if (!ACCEPTABLE_FILE_FORMATS.includes(image_file.type)) {
-                                        return response.status(400).send({
-                                            error: 'File format is not supported'
-                                        });
-                                    }
+                                    if (recipe_id != null) {
+                                        database.query(
+                                            'SELECT * from IMAGES\
+                                            where recipe_id = $1', [recipe_id],
+                                            function (err, imageResult) {
+                                                console.log(err);
+                                                console.log(imageResult);
 
-                                    if (image_file.size > ACCEPTABLE_FILE_SIZE_BYTES) {
-                                        return response.status(400).send({
-                                            error: 'File size is higher than 500 KBs'
-                                        });
-                                    }
+                                                if (err) {
+                                                    return response.status(400).send({
+                                                        error: 'database error'
+                                                    });
+                                                } else {
+                                                    if (imageResult.rows.length != 0 && imageResult.rows[0].id != null) {
+                                                        const deleteParams = {
+                                                            Bucket: S3_BUCKET_NAME,
+                                                            Key: "images/" + imageResult.rows[0].id
+                                                        };
+                                                        s3.deleteObject(deleteParams, function (err, data) {
+                                                            if (err) {
+                                                                console.log(err);
+                                                            }
+                                                            console.log('File deleted successfully.');
+                                                        });
+                                                    }
+                                                    var image_file = files.image;
+                                                    if (!ACCEPTABLE_FILE_FORMATS.includes(image_file.type)) {
+                                                        return response.status(400).send({
+                                                            error: 'File format is not supported'
+                                                        });
+                                                    }
 
-                                    const image_uuid = uuidv4();
-                                    const fileContent = fs.readFileSync(image_file.path);
-                                    const params = {
-                                        Bucket: S3_BUCKET_NAME,
-                                        Key: "images/" + image_uuid,
-                                        Body: fileContent,
-                                        Metadata: {
-                                            "name": image_file.name,
-                                            "content_length": image_file.size.toString(),
-                                            "filetype": image_file.type
-                                        }
-                                    };
-                                    s3.upload(params, function (err, data) {
-                                        if (err) {
-                                            logger.error(err);
-                                            console.log(err);
-                                            return response.status(500).send({
-                                                error: 'Error storing the file to storage system'
+                                                    if (image_file.size > ACCEPTABLE_FILE_SIZE_BYTES) {
+                                                        return response.status(400).send({
+                                                            error: 'File size is higher than 500 KBs'
+                                                        });
+                                                    }
+
+                                                    const image_uuid = uuidv4();
+                                                    const fileContent = fs.readFileSync(image_file.path);
+                                                    const params = {
+                                                        Bucket: S3_BUCKET_NAME,
+                                                        Key: "images/" + image_uuid,
+                                                        Body: fileContent,
+                                                        Metadata: {
+                                                            "name": image_file.name,
+                                                            "content_length": image_file.size.toString(),
+                                                            "filetype": image_file.type
+                                                        }
+                                                    };
+                                                    s3.upload(params, function (err, data) {
+                                                        if (err) {
+                                                            logger.error(err);
+                                                            console.log(err);
+                                                            return response.status(500).send({
+                                                                error: 'Error storing the file to storage system'
+                                                            });
+                                                        }
+                                                        console.log(`File uploaded successfully. ${data.Location}`);
+                                                        console.log(data);
+                                                        database.query('INSERT INTO IMAGES \
+                                        (id, recipe_id, url, content_length, last_modified) VALUES ($1, $2, $3, $4, $5) RETURNING id,url', [image_uuid, recipe_id, data.Location, image_file.size, new Date()], function (err, insertResult) {
+                                                            if (err) {
+                                                                logger.error(err);
+                                                                console.log('error here');
+                                                                return response.status(500).send({
+                                                                    error: 'Error storing the file metadata'
+                                                                });
+                                                            } else {
+                                                                console.log("successfully uploaded the file.");
+                                                                return response.status(200).json(insertResult.rows[0]);
+                                                            }
+                                                        });
+                                                    });
+                                                }
                                             });
-                                        }
-                                        console.log(`File uploaded successfully. ${data.Location}`);
-                                        console.log(data);
-                                        database.query('INSERT INTO IMAGES \
-							        	(id, recipe_id, url, content_length, last_modified) VALUES ($1, $2, $3, $4, $5) RETURNING id,url', [image_uuid, recipe_id, data.Location, image_file.size, new Date()], function (err, insertResult) {
-                                            if (err) {
-                                                logger.error(err);
-                                                console.log('error here');
-                                                return response.status(500).send({
-                                                    error: 'Error storing the file metadata'
-                                                });
-                                            } else {
-                                                console.log("successfully uploaded the file.");
-                                                return response.status(200).json(insertResult.rows[0]);
-                                            }
-                                        });
-                                    });
+                                    }
                                 });
                             }
                         } else {
@@ -144,7 +172,7 @@ const getImage = (request, response) => {
     if (recipe_id != null && image_id != null) {
         database.query(
             'SELECT id, url from IMAGES\
-			where recipe_id = $1 and id =$2', [recipe_id, image_id],
+            where recipe_id = $1 and id =$2', [recipe_id, image_id],
             function (err, imageResult) {
                 if (err) {
                     logger.error(err);
@@ -155,11 +183,11 @@ const getImage = (request, response) => {
                     let params = {
                         Bucket: S3_BUCKET_NAME,
                         Expires: 120, //seconds
-                        Key: "images/"+imageResult.rows[0].id
+                        Key: "images/" + imageResult.rows[0].id
 
                     };
-                    console.log("Keys" +params.Key);
-                    s3.getSignedUrl('getObject', params, (err, data) =>{
+                    console.log("Keys" + params.Key);
+                    s3.getSignedUrl('getObject', params, (err, data) => {
                         console.log(data);
 
                         console.log(imageResult.rows[0])
@@ -168,9 +196,9 @@ const getImage = (request, response) => {
                                 id: imageResult.rows[0].id,
                                 url: data
                             }
-                            });
+                        });
                     });
-                    }
+                }
 
             });
     } else {
@@ -189,7 +217,7 @@ const deleteImage = (request, response) => {
             var user_id = user.id;
             database.query(
                 'SELECT author_id from RECIPE \
-        	where recipe_id = $1', [recipe_id],
+            where recipe_id = $1', [recipe_id],
                 function (err, recipeResult) {
                     if (err) {
                         logger.error(err);
