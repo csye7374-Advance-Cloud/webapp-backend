@@ -353,3 +353,47 @@ ReferenceError: Key is not defined
 TIMESTAMP: 2020-02-21T03:47:14.067Z, LEVEL:  info, MESSAGE: 	Get Image
 TIMESTAMP: 2020-02-21T03:48:03.426Z, LEVEL:  info, MESSAGE: 	Get Image
 TIMESTAMP: 2020-02-21T03:48:45.547Z, LEVEL:  info, MESSAGE: 	Get Image
+TIMESTAMP: 2020-02-26T22:35:53.873Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:23:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T22:42:48.306Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:23:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T22:45:34.027Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:23:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T22:47:34.720Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-26T22:47:34.979Z, LEVEL:  error, MESSAGE: 	duplicate key value violates unique constraint "appusers_emailaddress_key"
+TIMESTAMP: 2020-02-26T22:47:39.173Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:48:09.729Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:48:43.191Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:49:10.788Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:50:47.314Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:56:50.004Z, LEVEL:  info, MESSAGE: 	get recipe call

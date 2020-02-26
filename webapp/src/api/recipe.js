@@ -6,6 +6,8 @@ const api = require('./api');
 const logger = require('../../config/winston')
 const AWS = require('aws-sdk');
 const dotenv = require('dotenv');
+const redis = require('redis');
+const client = redis.createClient();
 
 
 dotenv.config();
@@ -110,12 +112,19 @@ const createRecipe = (request, response) => {
                                                 });
 
                                             } else {
-                                                return response.status(200).json({
+                                                let jsonData = {
                                                     info: recipeResult.rows[0],
                                                     steps: OrderedResult.rows,
                                                     nutrition_information: nutritionResult.rows[0]
+                                                };
 
-                                                });
+                                                const Result = JSON.stringify(jsonData);
+                                                const recipeIdKey = JSON.stringify(recipeResult.rows[0].recipe_id);
+
+                                                console.log(recipeIdKey);
+                                                client.setex(recipeIdKey, 600, Result, redis.print);
+
+                                                return response.status(200).json({ jsonData });
                                             }
                                         });
 
@@ -141,9 +150,12 @@ const createRecipe = (request, response) => {
 
 const deleteRecipe = (request, response) => {
     let id = request.params.id;
+    const key = JSON.stringify(key);
 
     if (id != null) {
 
+        // console.log("inside del");
+        //client.del(result.rows[0].id, redis.print);
         api.authPromise(request).then(
             function (user) {
                 const user_id = user.id;
@@ -393,60 +405,70 @@ const updateRecipe = (request, response) => {
 const getRecipe = (request, response) => {
     logger.info("get recipe call");
     var id = request.params.id;
+    const key = JSON.stringify(id);
+    console.log(key);
     if (id != null) {
-        database.query(
-            'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
+        client.get(key, (err, data) => {
+            if (err) throw err;
+            if (data !== null) {
+                console.log("inside");
+                return response.status(200).json(data);
+            } else {
+                database.query(
+                    'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
         where recipe_id = $1', [id],
-            function (err, recipeResult) {
-                if (err) {
-                    logger.error(err);
-                    return response.status(500).send({
-                        error: 'Error getting recipe'
-                    });
-                } else {
-                    if (recipeResult.rows.length > 0) {
-                        recipeResult.rows[0].ingredients = JSON.parse(recipeResult.rows[0].ingredients);
-                        database.query("select position, instruction from orderedlist where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultSteps) {
-                            if (err) {
-                                logger.error(err);
-                                return response.status(500).send({
-                                    error: 'Error getting recipe'
-                                });
-                            } else {
-                                database.query("select calories, cholesterol_in_mg, sodium_in_mg, carbohydrates_in_grams, protein_in_grams from nutrition where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultNutrition) {
+                    function (err, recipeResult) {
+                        if (err) {
+                            logger.error(err);
+                            return response.status(500).send({
+                                error: 'Error getting recipe'
+                            });
+                        } else {
+                            if (recipeResult.rows.length > 0) {
+                                recipeResult.rows[0].ingredients = JSON.parse(recipeResult.rows[0].ingredients);
+                                database.query("select position, instruction from orderedlist where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultSteps) {
                                     if (err) {
                                         logger.error(err);
                                         return response.status(500).send({
                                             error: 'Error getting recipe'
                                         });
                                     } else {
-                                        database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
+                                        database.query("select calories, cholesterol_in_mg, sodium_in_mg, carbohydrates_in_grams, protein_in_grams from nutrition where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultNutrition) {
                                             if (err) {
                                                 logger.error(err);
                                                 return response.status(500).send({
-                                                    error: 'Error getting images data'
+                                                    error: 'Error getting recipe'
                                                 });
+                                            } else {
+                                                database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
+                                                    if (err) {
+                                                        logger.error(err);
+                                                        return response.status(500).send({
+                                                            error: 'Error getting images data'
+                                                        });
+                                                    }
+
+                                                    return response.status(200).json({
+                                                        image: imageResult.rows,
+                                                        info: recipeResult.rows[0],
+                                                        steps: resultSteps.rows,
+                                                        nutrition_information: resultNutrition.rows[0]
+                                                    });
+                                                })
+
                                             }
-
-                                            return response.status(200).json({
-                                                image: imageResult.rows,
-                                                info: recipeResult.rows[0],
-                                                steps: resultSteps.rows,
-                                                nutrition_information: resultNutrition.rows[0]
-                                            });
-                                        })
-
+                                        });
                                     }
                                 });
+                            } else {
+                                return response.status(404).send({
+                                    error: 'Recipe does not exist!'
+                                });
                             }
-                        });
-                    } else {
-                        return response.status(404).send({
-                            error: 'Recipe does not exist!'
-                        });
-                    }
-                }
-            });
+                        }
+                    });
+            }
+        });
     } else {
         return response.status(404).send({
             error: 'Please enter the recipe id'
