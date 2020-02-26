@@ -7,6 +7,8 @@ const image = require('./src/api/image');
 const dotenv = require('dotenv');
 const logger = require('./config/winston');
 let cors = require('cors');
+const redis = require('redis');
+const client = redis.createClient();
 
 dotenv.config();
 const PORT = process.env.PORT;
