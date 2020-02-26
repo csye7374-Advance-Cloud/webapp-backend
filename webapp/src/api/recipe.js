@@ -22,7 +22,7 @@ AWS.config.update({
     region: REGION
 });
 console.log("Bucket Name:", S3_BUCKET_NAME);
-
+var s3 = new AWS.S3();
 const createRecipe = (request, response) => {
     logger.info("create recipe call");
     let start = Date.now();
