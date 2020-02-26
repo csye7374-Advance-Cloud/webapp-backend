@@ -5,7 +5,7 @@ const format = require('pg-format');
 const api = require('./api');
 const logger = require('../../config/winston')
 const AWS = require('aws-sdk');
-
+const dotenv = require('dotenv');
 
 
 dotenv.config();
