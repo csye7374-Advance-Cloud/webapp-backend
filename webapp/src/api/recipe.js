@@ -4,6 +4,24 @@ const database = db.connection;
 const format = require('pg-format');
 const api = require('./api');
 const logger = require('../../config/winston')
+const AWS = require('aws-sdk');
+
+
+
+dotenv.config();
+const {
+    S3_BUCKET_NAME,
+    AWS_KEY,
+    SECRET_KEY,
+    REGION
+} = process.env;
+
+AWS.config.update({
+    accessKeyId: AWS_KEY,
+    secretAccessKey: SECRET_KEY,
+    region: REGION
+});
+console.log("Bucket Name:", S3_BUCKET_NAME);
 
 const createRecipe = (request, response) => {
     logger.info("create recipe call");
