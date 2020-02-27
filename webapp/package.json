@@ -20,6 +20,7 @@
     "email-validator": "^2.0.4",
     "express": "^4.17.1",
     "formidable": "^1.2.1",
+    "ioredis": "^4.16.0",
     "nohup": "^0.1.0",
     "pg": "^7.12.1",
     "pg-format": "^1.0.4",
