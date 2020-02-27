@@ -8,6 +8,8 @@ const database = db.connection;
 const format = require('pg-format');
 const api = require('./api');
 const logger = require('../../config/winston');
+const Redis = require("ioredis");
+const redis = new Redis();
 
 dotenv.config();
 const {
@@ -76,9 +78,6 @@ const uploadImage = (request, response) => {
                                             'SELECT * from IMAGES\
                                             where recipe_id = $1', [recipe_id],
                                             function (err, imageResult) {
-                                                console.log(err);
-                                                console.log(imageResult);
-
                                                 if (err) {
                                                     return response.status(400).send({
                                                         error: 'database error'
@@ -143,7 +142,6 @@ const uploadImage = (request, response) => {
                                                             });
                                                         }
                                                         console.log(`File uploaded successfully. ${data.Location}`);
-                                                        console.log(data);
                                                         database.query('INSERT INTO IMAGES \
                                         (id, recipe_id, url, content_length, last_modified) VALUES ($1, $2, $3, $4, $5) RETURNING id,url', [image_uuid, recipe_id, data.Location, image_file.size, new Date()], function (err, insertResult) {
                                                             if (err) {
@@ -153,8 +151,23 @@ const uploadImage = (request, response) => {
                                                                     error: 'Error storing the file metadata'
                                                                 });
                                                             } else {
-                                                                console.log("successfully uploaded the file.");
-                                                                return response.status(200).json(insertResult.rows[0]);
+                                                                var image_result = JSON.stringify(insertResult.rows[0]);
+                                                                redis.get(recipe_id, function (err, result) {
+                                                                    if (err) {
+                                                                        console.error(err);
+                                                                    } else {
+                                                                        let redis_result = {
+                                                                            image_data: image_result,
+                                                                            recipe_data: result
+                                                                        }
+
+                                                                        const final_result = JSON.stringify(redis_result);
+                                                                        redis.set(recipe_id, final_result, "EX", 600);
+                                                                        console.log("successfully uploaded the file.");
+                                                                        return response.status(200).json(insertResult.rows[0]);
+                                                                    }
+                                                                });
+
                                                             }
                                                         });
                                                     });
@@ -194,29 +207,30 @@ const getImage = (request, response) => {
                     });
                 } else {
                     if (imageResult.rows.length > 0) {
-                    let params = {
-                        Bucket: S3_BUCKET_NAME,
-                        Expires: 120, //seconds
-                        Key: "images/" + imageResult.rows[0].id
+                        let params = {
+                            Bucket: S3_BUCKET_NAME,
+                            Expires: 120, //seconds
+                            Key: "images/" + imageResult.rows[0].id
 
-                    };
-                    console.log("Keys" + params.Key);
-                    s3.getSignedUrl('getObject', params, (err, data) => {
-                        console.log(data);
+                        };
+                        console.log("Keys" + params.Key);
+                        s3.getSignedUrl('getObject', params, (err, data) => {
+                            console.log(data);
 
-                        console.log(imageResult.rows[0])
-                        return response.status(200).json({
-                            image: {
-                                id: imageResult.rows[0].id,
-                                url: data
-                            }
+                            console.log(imageResult.rows[0])
+                            return response.status(200).json({
+                                image: {
+                                    id: imageResult.rows[0].id,
+                                    url: data
+                                }
+                            });
                         });
-                    });
-                }else{
+                    } else {
                         return response.status(404).send({
                             error: 'Image does not exist.'
                         });
-                    }}
+                    }
+                }
 
             });
     } else {
