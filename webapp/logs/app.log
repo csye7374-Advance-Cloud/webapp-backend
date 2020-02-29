@@ -353,3 +353,936 @@ ReferenceError: Key is not defined
 TIMESTAMP: 2020-02-21T03:47:14.067Z, LEVEL:  info, MESSAGE: 	Get Image
 TIMESTAMP: 2020-02-21T03:48:03.426Z, LEVEL:  info, MESSAGE: 	Get Image
 TIMESTAMP: 2020-02-21T03:48:45.547Z, LEVEL:  info, MESSAGE: 	Get Image
+TIMESTAMP: 2020-02-26T22:35:53.873Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:23:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T22:42:48.306Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:23:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T22:45:34.027Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:23:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T22:47:34.720Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-02-26T22:47:34.979Z, LEVEL:  error, MESSAGE: 	duplicate key value violates unique constraint "appusers_emailaddress_key"
+TIMESTAMP: 2020-02-26T22:47:39.173Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:48:09.729Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:48:43.191Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:49:10.788Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:50:47.314Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T22:56:50.004Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-26T23:28:54.776Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (252:0)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (252:0)
+[0m [90m 250 | [39m
+ [90m 251 | [39m
+[31m[1m>[22m[39m[90m 252 | [39m[36mconst[39m updateRecipe [33m=[39m (request[33m,[39m response) [33m=>[39m {
+ [90m     | [39m[31m[1m^[22m[39m
+ [90m 253 | [39m            logger[33m.[39minfo([32m"update recipe call"[39m)[33m;[39m
+ [90m 254 | [39m            [36mvar[39m id [33m=[39m request[33m.[39mparams[33m.[39mid[33m;[39m
+ [90m 255 | [39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+TIMESTAMP: 2020-02-26T23:29:35.244Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (245:10)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (245:10)
+[0m [90m 243 | [39m                    response[33m.[39mstatus([35m401[39m)[33m.[39msend(err)[33m;[39m
+ [90m 244 | [39m                })[33m;[39m
+[31m[1m>[22m[39m[90m 245 | [39m        } [36melse[39m {
+ [90m     | [39m          [31m[1m^[22m[39m
+ [90m 246 | [39m            response[33m.[39mstatus([35m404[39m)[33m.[39mjson({
+ [90m 247 | [39m                message[33m:[39m [32m'Missing Parameters. Bad Request'[39m
+ [90m 248 | [39m            })[33m;[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+TIMESTAMP: 2020-02-26T23:29:51.412Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (246:10)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (246:10)
+[0m [90m 244 | [39m                    response[33m.[39mstatus([35m401[39m)[33m.[39msend(err)[33m;[39m
+ [90m 245 | [39m                })[33m;[39m
+[31m[1m>[22m[39m[90m 246 | [39m        } [36melse[39m {
+ [90m     | [39m          [31m[1m^[22m[39m
+ [90m 247 | [39m            response[33m.[39mstatus([35m404[39m)[33m.[39mjson({
+ [90m 248 | [39m                message[33m:[39m [32m'Missing Parameters. Bad Request'[39m
+ [90m 249 | [39m            })[33m;[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+TIMESTAMP: 2020-02-26T23:29:51.704Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (246:10)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected , (246:10)
+[0m [90m 244 | [39m                    response[33m.[39mstatus([35m401[39m)[33m.[39msend(err)[33m;[39m
+ [90m 245 | [39m                })[33m;[39m
+[31m[1m>[22m[39m[90m 246 | [39m        } [36melse[39m {
+ [90m     | [39m          [31m[1m^[22m[39m
+ [90m 247 | [39m            response[33m.[39mstatus([35m404[39m)[33m.[39mjson({
+ [90m 248 | [39m                message[33m:[39m [32m'Missing Parameters. Bad Request'[39m
+ [90m 249 | [39m            })[33m;[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+TIMESTAMP: 2020-02-26T23:35:39.007Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:22:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T23:35:39.224Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:22:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T23:37:52.047Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:22:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-26T23:46:06.931Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-26T23:52:30.905Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-26T23:52:30.914Z, LEVEL:  error, MESSAGE: 	Unauthorized : Invalid emailaddress
+TIMESTAMP: 2020-02-26T23:52:42.553Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-26T23:52:42.855Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot read property 'recipe_id' of undefined
+TypeError: Cannot read property 'recipe_id' of undefined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:379:133)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:02:12.056Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T00:02:28.628Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:02:28.810Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:02:28.920Z, LEVEL:  error, MESSAGE: 	uncaughtException: recipeIdKey is not defined
+ReferenceError: recipeIdKey is not defined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:373:90)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:02:43.307Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:02:43.606Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:02:43.608Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:02:43.749Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:470:11)
+    at ServerResponse.header (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/response.js:267:15)
+    at Query.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:459:81)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+TIMESTAMP: 2020-02-27T00:04:35.277Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T00:04:49.261Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:04:49.436Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:04:49.439Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:04:49.595Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot set headers after they are sent to the client
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (_http_outgoing.js:470:11)
+    at ServerResponse.header (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/response.js:771:10)
+    at ServerResponse.send (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/response.js:170:12)
+    at ServerResponse.json (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/response.js:267:15)
+    at Query.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:460:81)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+TIMESTAMP: 2020-02-27T00:09:13.830Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:09:14.057Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:09:14.155Z, LEVEL:  error, MESSAGE: 	uncaughtException: Converting circular structure to JSON
+TypeError: Converting circular structure to JSON
+    at JSON.stringify (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:372:96)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:10:03.036Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:10:03.285Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:10:03.429Z, LEVEL:  error, MESSAGE: 	uncaughtException: value is not defined
+ReferenceError: value is not defined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:374:100)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:11:55.914Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:11:56.145Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:18:31.857Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:18:32.202Z, LEVEL:  error, MESSAGE: 	uncaughtException: body is not defined
+ReferenceError: body is not defined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:371:106)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:19:56.144Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:19:56.386Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:19:56.482Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:372:96)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:20:49.735Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:20:50.021Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:20:50.120Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:372:96)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:21:09.454Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:21:09.752Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:21:09.855Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token o in JSON at position 1
+SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:372:96)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:22:51.439Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:22:51.722Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:22:51.829Z, LEVEL:  error, MESSAGE: 	uncaughtException: ServerResponse is not defined
+ReferenceError: ServerResponse is not defined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:372:102)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:23:27.350Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:23:27.625Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:23:27.627Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:23:27.726Z, LEVEL:  error, MESSAGE: 	uncaughtException: ServerResponse is not defined
+ReferenceError: ServerResponse is not defined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:373:102)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:23:57.604Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:23:57.865Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:23:57.866Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:23:57.966Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:373:96)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:33:54.731Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:33:55.009Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:34:09.194Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:34:09.479Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:37:47.405Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:37:47.682Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:38:06.240Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:38:06.500Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:40:56.089Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:40:56.369Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:40:56.461Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:373:95)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:42:06.146Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:42:06.379Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:42:06.478Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:374:95)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:46:05.141Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:46:05.409Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:46:05.510Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:377:95)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:46:42.200Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:46:42.482Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:46:42.583Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:377:95)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:47:32.771Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:47:33.049Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:47:33.192Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token u in JSON at position 0
+SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:375:95)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T00:48:44.562Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:48:44.857Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:49:30.233Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:49:30.460Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:50:22.135Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:50:22.399Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:50:22.402Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:50:22.496Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot read property 'body' of undefined
+TypeError: Cannot read property 'body' of undefined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:373:90)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:58:30.302Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:58:30.600Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:58:30.697Z, LEVEL:  error, MESSAGE: 	uncaughtException: res is not defined
+ReferenceError: res is not defined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:375:90)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T00:58:46.139Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T00:58:46.429Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T00:58:46.533Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot read property 'body' of undefined
+TypeError: Cannot read property 'body' of undefined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:375:107)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T01:02:41.596Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:02:41.881Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:06:40.267Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:06:40.525Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:07:05.970Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:07:06.243Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:08:39.928Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:08:40.166Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:09:06.902Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:09:07.097Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:09:25.614Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:09:29.315Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:09:31.355Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:15:05.396Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:16:49.123Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:17:30.536Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T01:17:41.104Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:20:01.022Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:20:35.104Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:21:11.881Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:25:32.516Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T01:26:29.164Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T01:27:28.161Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:28:21.172Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:06.652Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:11.413Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:13.861Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:15.117Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:15.986Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:16.877Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:17.763Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:19.109Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:19.893Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:20.667Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:21.456Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:29:22.550Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:32:28.232Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T01:32:42.278Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:32:56.913Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:32:57.099Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:33:13.451Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:33:13.602Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T01:34:00.490Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T01:34:00.632Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T19:50:10.785Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T19:50:33.920Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T19:51:05.359Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:8)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:8)
+[0m [90m 475 | [39m        })[33m;[39m
+ [90m 476 | [39m}
+[31m[1m>[22m[39m[90m 477 | [39m        })[33m;[39m
+ [90m     | [39m        [31m[1m^[22m[39m
+ [90m 478 | [39m    } [36melse[39m {
+ [90m 479 | [39m    [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({
+ [90m 480 | [39m        error[33m:[39m [32m'Please enter the recipe id'[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$3.parseExpression (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3306:19)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1906:19)
+TIMESTAMP: 2020-02-27T19:51:57.984Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:8)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:8)
+[0m [90m 475 | [39m        })[33m;[39m
+ [90m 476 | [39m}
+[31m[1m>[22m[39m[90m 477 | [39m        })[33m;[39m
+ [90m     | [39m        [31m[1m^[22m[39m
+ [90m 478 | [39m    } [36melse[39m {
+ [90m 479 | [39m    [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({
+ [90m 480 | [39m        error[33m:[39m [32m'Please enter the recipe id'[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$3.parseExpression (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3306:19)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1906:19)
+TIMESTAMP: 2020-02-27T19:52:46.638Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected ; (478:2)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected ; (478:2)
+[0m [90m 476 | [39m    }
+ [90m 477 | [39m
+[31m[1m>[22m[39m[90m 478 | [39m} [36melse[39m {
+ [90m     | [39m  [31m[1m^[22m[39m
+ [90m 479 | [39m    [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({
+ [90m 480 | [39m        error[33m:[39m [32m'Please enter the recipe id'[39m
+ [90m 481 | [39m    })[33m;[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.semicolon (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1742:38)
+    at Parser.pp$1.parseVarStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:2170:8)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1861:19)
+    at Parser.pp$1.parseBlockBody (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:2268:21)
+    at Parser.pp$1.parseTopLevel (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1778:8)
+    at Parser.parse (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1673:17)
+    at parse (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:7305:37)
+    at File.parse (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:485:15)
+TIMESTAMP: 2020-02-27T19:52:59.744Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T19:56:26.461Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T19:56:37.384Z, LEVEL:  error, MESSAGE: 	Access Denied
+TIMESTAMP: 2020-02-27T20:01:11.540Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T20:02:22.175Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T20:22:03.386Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:14)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:14)
+[0m [90m 475 | [39m
+ [90m 476 | [39m
+[31m[1m>[22m[39m[90m 477 | [39m            } [36melse[39m {
+ [90m     | [39m              [31m[1m^[22m[39m
+ [90m 478 | [39m                [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({
+ [90m 479 | [39m                    error[33m:[39m [32m'Please enter the recipe id'[39m
+ [90m 480 | [39m                })[33m;[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$3.parseExpression (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3306:19)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1906:19)
+TIMESTAMP: 2020-02-27T20:22:14.876Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:14)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (477:14)
+[0m [90m 475 | [39m
+ [90m 476 | [39m
+[31m[1m>[22m[39m[90m 477 | [39m            } [36melse[39m {
+ [90m     | [39m              [31m[1m^[22m[39m
+ [90m 478 | [39m                [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({
+ [90m 479 | [39m                    error[33m:[39m [32m'Please enter the recipe id'[39m
+ [90m 480 | [39m                })[33m;[39m[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$3.parseExpression (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3306:19)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1906:19)
+TIMESTAMP: 2020-02-27T20:23:27.552Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T20:28:10.200Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T20:28:42.953Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T20:29:45.523Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T21:16:10.262Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T21:16:25.909Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:16:26.678Z, LEVEL:  error, MESSAGE: 	uncaughtException: redis is not defined
+ReferenceError: redis is not defined
+    at Query.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:153:78)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T21:16:52.268Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:17:53.050Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:19:22.360Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:19:40.281Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:19:41.084Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token o in JSON at position 1
+SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Query.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:154:83)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T21:22:33.706Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:24:10.876Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:26:09.526Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:26:50.606Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:31:21.870Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:31:42.311Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:32:04.353Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T21:32:14.672Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:32:38.858Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:35:12.154Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:22:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-27T21:45:03.837Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected ; (489:1)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token, expected ; (489:1)
+[0m [90m 487 | [39m            })[33m;[39m
+ [90m 488 | [39m    }
+[31m[1m>[22m[39m[90m 489 | [39m})[33m;[39m
+ [90m     | [39m [31m[1m^[22m[39m
+ [90m 490 | [39m
+ [90m 491 | [39m    } [36melse[39m {
+ [90m 492 | [39m    [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.semicolon (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1742:38)
+    at Parser.pp$1.parseVarStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:2170:8)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1861:19)
+    at Parser.pp$1.parseBlockBody (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:2268:21)
+    at Parser.pp$1.parseTopLevel (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1778:8)
+    at Parser.parse (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1673:17)
+    at parse (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:7305:37)
+    at File.parse (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:485:15)
+TIMESTAMP: 2020-02-27T21:48:48.908Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (485:13)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (485:13)
+[0m [90m 483 | [39m                        })[33m;[39m
+ [90m 484 | [39m                }
+[31m[1m>[22m[39m[90m 485 | [39m            })[33m;[39m
+ [90m     | [39m             [31m[1m^[22m[39m
+ [90m 486 | [39m
+ [90m 487 | [39m    } [36melse[39m {
+ [90m 488 | [39m        [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$3.parseExpression (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3306:19)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1906:19)
+TIMESTAMP: 2020-02-27T21:48:58.621Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (485:13)
+SyntaxError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Unexpected token (485:13)
+[0m [90m 483 | [39m                        })[33m;[39m
+ [90m 484 | [39m                }
+[31m[1m>[22m[39m[90m 485 | [39m            })[33m;[39m
+ [90m     | [39m             [31m[1m^[22m[39m
+ [90m 486 | [39m
+ [90m 487 | [39m    } [36melse[39m {
+ [90m 488 | [39m        [36mreturn[39m response[33m.[39mstatus([35m404[39m)[33m.[39msend({[0m
+    at Parser.pp$5.raise (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp$3.parseExprAtom (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3750:12)
+    at Parser.pp$3.parseExprSubscripts (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3344:19)
+    at Parser.pp$3.parseExpression (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:3306:19)
+    at Parser.pp$1.parseStatement (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babylon/lib/index.js:1906:19)
+TIMESTAMP: 2020-02-27T21:57:30.119Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T21:58:17.240Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T21:58:50.138Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T21:58:57.205Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:00:09.696Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:00:09.772Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token { in JSON at position 157
+SyntaxError: Unexpected token { in JSON at position 157
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:429:43
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T22:01:34.209Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:01:58.990Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:02:32.790Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:11:32.700Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:11:48.380Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:09.636Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:22.930Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:24.909Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:25.817Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:26.771Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:27.728Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:28.755Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:12:57.108Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:13:43.155Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:13:52.500Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:13:52.610Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token { in JSON at position 157
+SyntaxError: Unexpected token { in JSON at position 157
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:428:43
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T22:14:52.283Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:15:10.439Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:15:10.492Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token { in JSON at position 157
+SyntaxError: Unexpected token { in JSON at position 157
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:428:43
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T22:27:29.615Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:27:41.165Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:27:54.845Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:29:32.011Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:29:32.794Z, LEVEL:  error, MESSAGE: 	uncaughtException: json is not defined
+ReferenceError: json is not defined
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:162:90
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T22:30:31.911Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:30:32.739Z, LEVEL:  error, MESSAGE: 	uncaughtException: json is not defined
+ReferenceError: json is not defined
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:159:91
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T22:42:00.433Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:42:22.163Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:42:38.003Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:43:03.412Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:43:22.581Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:43:37.791Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:44:50.418Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:45:12.849Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:45:50.283Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:46:02.838Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:46:14.191Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:46:52.370Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:47:07.734Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:47:27.935Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:54:12.247Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:54:23.005Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:54:32.788Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:54:33.541Z, LEVEL:  error, MESSAGE: 	uncaughtException: json_data is not defined
+ReferenceError: json_data is not defined
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:159:85
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T22:55:01.362Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:55:02.176Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token o in JSON at position 1
+SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:164:99
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T22:57:48.870Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:57:59.410Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:58:06.970Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:58:13.038Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T22:58:25.826Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:58:34.229Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T22:58:43.766Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:59:03.305Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T22:59:03.598Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T22:59:25.830Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T22:59:26.182Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:00:15.913Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:00:16.054Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected end of JSON input
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:428:43
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T23:02:55.946Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:02:56.453Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:03:10.435Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:03:10.562Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected end of JSON input
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:429:43
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T23:07:10.676Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:07:10.753Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected end of JSON input
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:429:43
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T23:08:07.019Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:08:07.504Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:08:20.079Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:08:20.186Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected end of JSON input
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:429:43
+    at tryCatcher (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/utils.js:11:23)
+    at promise.then (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/standard-as-callback/built/index.js:19:49)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TIMESTAMP: 2020-02-27T23:14:52.242Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:22:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-02-27T23:15:09.696Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T23:15:26.347Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:15:33.865Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:15:34.343Z, LEVEL:  error, MESSAGE: 	uncaughtException: Request is not defined
+ReferenceError: Request is not defined
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:376:90)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+TIMESTAMP: 2020-02-27T23:16:04.602Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:16:05.060Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:16:40.774Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:16:41.227Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:16:41.378Z, LEVEL:  error, MESSAGE: 	uncaughtException: Unexpected token o in JSON at position 1
+SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Query.callback (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:377:95)
+    at Query.handleReadyForQuery (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/query.js:128:10)
+    at Connection.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/client.js:247:19)
+    at Connection.emit (events.js:198:13)
+    at Connection.EventEmitter.emit (domain.js:448:20)
+    at Socket.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/pg/lib/connection.js:134:12)
+    at Socket.emit (events.js:198:13)
+    at Socket.EventEmitter.emit (domain.js:448:20)
+    at addChunk (_stream_readable.js:288:12)
+TIMESTAMP: 2020-02-27T23:17:01.674Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:17:02.175Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:17:18.424Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:17:25.574Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T23:17:39.729Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:17:54.344Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:17:54.724Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:18:02.469Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:18:13.621Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T23:18:17.789Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:18:22.535Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:18:22.829Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:18:29.830Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:18:44.100Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-02-27T23:18:58.670Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:19:12.131Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:19:12.429Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:19:19.848Z, LEVEL:  info, MESSAGE: 	Image Upload
+TIMESTAMP: 2020-02-27T23:19:28.152Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:19:31.562Z, LEVEL:  info, MESSAGE: 	update recipe call
+TIMESTAMP: 2020-02-27T23:19:31.863Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-02-27T23:19:42.819Z, LEVEL:  info, MESSAGE: 	get recipe call
