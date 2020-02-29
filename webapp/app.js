@@ -29,14 +29,7 @@ app.use(
     })
 );
 
-const redis = new Redis({
-  sentinels: [
-    { host: REDIS_SENTINEL_HOSTNAME , port: REDIS_SENTINEL_PORT }
-  ],
-  name: REDIS_MASTERNAME,
-  password: REDIS_PASSWORD,
-  sentinelPassword: REDIS_PASSWORD
-});
+
 
 app.listen(PORT, () => {
   console.log(`App running on PORT ${PORT}.`);
@@ -68,6 +61,16 @@ app.get('/howyoudoin', (request, response) => {
 });
 
 app.get('/redisLivenessCheck', (request, response) => {
+
+  const redis = new Redis({
+    sentinels: [
+      { host: REDIS_SENTINEL_HOSTNAME , port: REDIS_SENTINEL_PORT }
+    ],
+    name: REDIS_MASTERNAME,
+    password: REDIS_PASSWORD,
+    sentinelPassword: REDIS_PASSWORD
+  });
+
   redis.on('connect',function(){
     console.log("Redis Connected Successfully");
     redis.set('testkey', 'testvalue');
