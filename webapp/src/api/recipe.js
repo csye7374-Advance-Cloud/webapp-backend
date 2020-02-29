@@ -3,7 +3,7 @@ const uuidv4 = require('uuid/v4');
 const database = db.connection;
 const format = require('pg-format');
 const api = require('./api');
-const logger = require('../../config/winston')
+const logger = require('../../config/winston');
 const AWS = require('aws-sdk');
 const dotenv = require('dotenv');
 const Redis = require("ioredis");
@@ -300,7 +300,14 @@ const updateRecipe = (request, response) => {
             function (user) {
                 const user_id = user.id;
 
-                redis.del(id);
+                redis.del(id, function(err,data){
+                    if(err){
+                        console.log(err);
+                    }
+                    else{
+                        console.log("While Updating deleting the recipe", data);
+                    }
+                });
                 console.log("key deleted" + id);
                 database.query("BEGIN", function (err, result) {
                     database.query("SELECT * FROM RECIPE WHERE recipe_id = $1 AND author_id = $2;", [id, user_id], function (err, recipeResult) {
@@ -488,12 +495,24 @@ const getRecipe = (request, response) => {
     console.log("body ID:" + id);
 
     if (id != null) {
-            redis.on('connect',function(){
+
+        const redis = new Redis({
+            sentinels: [
+                { host: REDIS_SENTINEL_HOSTNAME , port: REDIS_SENTINEL_PORT }
+            ],
+            name: REDIS_MASTERNAME,
+            password: REDIS_PASSWORD,
+            sentinelPassword: REDIS_PASSWORD
+        });
+          //  const redis = new Redis();
+            redis.on("ready",function(){
+                console.log("CONNECTING")
                 redis.get(id, function (err, result) {
                     if (err) {
-                        console.error("MY ERROR:",err);
+
                         throw err;
                     } else {
+                        console.log("Result :: ",result);
                         if (result !== null) {
                             var new_result = JSON.parse(result);
                             console.log("result Returing from Redis");
@@ -533,7 +552,21 @@ const getRecipe = (request, response) => {
                                                                         error: 'Error getting images data'
                                                                     });
                                                                 }
-                                                                console.log("Returing DB Data")
+
+                                                                let jsonData = {
+                                                                    image: imageResult.rows,
+                                                                    info: recipeResult.rows[0],
+                                                                    steps: resultSteps.rows,
+                                                                    nutrition_information: resultNutrition.rows[0]
+                                                                };
+
+                                                                const Result = JSON.stringify(jsonData);
+                                                                const recipeIdKey = recipeResult.rows[0].recipe_id;
+
+
+                                                                redis.set(recipeIdKey, Result, "EX", 600);
+                                                                console.log("Redis entry not found during GETRECIPE API. Now Storing");
+
                                                                 return response.status(200).json({
                                                                     image: imageResult.rows,
                                                                     info: recipeResult.rows[0],
@@ -594,7 +627,7 @@ const getRecipe = (request, response) => {
                                                             error: 'Error getting images data'
                                                         });
                                                     }
-                                                    console.log("Returing DB Data")
+                                                    console.log("Returing DB Data");
                                                     return response.status(200).json({
                                                         image: imageResult.rows,
                                                         info: recipeResult.rows[0],
