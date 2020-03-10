@@ -10,7 +10,10 @@ const api = require('./api');
 const logger = require('../../config/winston');
 const Redis = require("ioredis");
 const rec = require("./recipe");
+var counter = require('./metrics');
 //const redis = new Redis();
+
+
 
 dotenv.config();
 const {
@@ -32,7 +35,7 @@ AWS.config.update({
 
 const redis = new Redis({
     sentinels: [
-        { host: REDIS_SENTINEL_HOSTNAME , port: REDIS_SENTINEL_PORT }
+        { host: REDIS_SENTINEL_HOSTNAME, port: REDIS_SENTINEL_PORT }
     ],
     name: REDIS_MASTERNAME,
     password: REDIS_PASSWORD,
@@ -58,6 +61,7 @@ var s3 = new AWS.S3();
 
 const uploadImage = (request, response) => {
     logger.info("Image Upload");
+    counter.image_upload.inc();
     var recipe_id = request.params.recipeId;
     // new code
     api.authPromise(request).then(
@@ -169,63 +173,63 @@ const uploadImage = (request, response) => {
                                                                 console.log("Going to delete recipe_id");
                                                                 redis.del(recipe_id);
                                                                 console.log("deleted recipe_id");
-                                                                    database.query(
-                                                                        'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
+                                                                database.query(
+                                                                    'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
                                                         where recipe_id = $1', [recipe_id],
-                                                                        function (err, recipeResult) {
-                                                                            if (err) {
-                                                                                logger.error(err);
-                                                                                return response.status(500).send({
-                                                                                    error: 'Error getting recipe'
+                                                                    function (err, recipeResult) {
+                                                                        if (err) {
+                                                                            logger.error(err);
+                                                                            return response.status(500).send({
+                                                                                error: 'Error getting recipe'
+                                                                            });
+                                                                        } else {
+                                                                            if (recipeResult.rows.length > 0) {
+                                                                                recipeResult.rows[0].ingredients = JSON.parse(recipeResult.rows[0].ingredients);
+                                                                                database.query("select position, instruction from orderedlist where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultSteps) {
+                                                                                    if (err) {
+                                                                                        logger.error(err);
+                                                                                        return response.status(500).send({
+                                                                                            error: 'Error getting recipe'
+                                                                                        });
+                                                                                    } else {
+                                                                                        database.query("select calories, cholesterol_in_mg, sodium_in_mg, carbohydrates_in_grams, protein_in_grams from nutrition where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultNutrition) {
+                                                                                            if (err) {
+                                                                                                logger.error(err);
+                                                                                                return response.status(500).send({
+                                                                                                    error: 'Error getting recipe'
+                                                                                                });
+                                                                                            } else {
+                                                                                                database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
+                                                                                                    if (err) {
+                                                                                                        logger.error(err);
+                                                                                                        return response.status(500).send({
+                                                                                                            error: 'Error getting images data'
+                                                                                                        });
+                                                                                                    }
+                                                                                                    let redis_json = {
+                                                                                                        image: imageResult.rows,
+                                                                                                        info: recipeResult.rows[0],
+                                                                                                        steps: resultSteps.rows,
+                                                                                                        nutrition_information: resultNutrition.rows[0]
+                                                                                                    }
+                                                                                                    console.log("got the data");
+                                                                                                    const final_result = JSON.stringify(redis_json);
+                                                                                                    redis.set(recipe_id, final_result, "EX", 600);
+                                                                                                    return response.status(200).json(insertResult.rows[0])
+
+                                                                                                })
+
+                                                                                            }
+                                                                                        });
+                                                                                    }
                                                                                 });
                                                                             } else {
-                                                                                if (recipeResult.rows.length > 0) {
-                                                                                    recipeResult.rows[0].ingredients = JSON.parse(recipeResult.rows[0].ingredients);
-                                                                                    database.query("select position, instruction from orderedlist where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultSteps) {
-                                                                                        if (err) {
-                                                                                            logger.error(err);
-                                                                                            return response.status(500).send({
-                                                                                                error: 'Error getting recipe'
-                                                                                            });
-                                                                                        } else {
-                                                                                            database.query("select calories, cholesterol_in_mg, sodium_in_mg, carbohydrates_in_grams, protein_in_grams from nutrition where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultNutrition) {
-                                                                                                if (err) {
-                                                                                                    logger.error(err);
-                                                                                                    return response.status(500).send({
-                                                                                                        error: 'Error getting recipe'
-                                                                                                    });
-                                                                                                } else {
-                                                                                                    database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
-                                                                                                        if (err) {
-                                                                                                            logger.error(err);
-                                                                                                            return response.status(500).send({
-                                                                                                                error: 'Error getting images data'
-                                                                                                            });
-                                                                                                        }
-                                                                                                        let redis_json = {
-                                                                                                            image: imageResult.rows,
-                                                                                                            info: recipeResult.rows[0],
-                                                                                                            steps: resultSteps.rows,
-                                                                                                            nutrition_information: resultNutrition.rows[0]
-                                                                                                        }
-                                                                                                        console.log("got the data");
-                                                                                                        const final_result = JSON.stringify(redis_json);
-                                                                                                        redis.set(recipe_id, final_result, "EX", 600);
-                                                                                                        return response.status(200).json(insertResult.rows[0])
-
-                                                                                                    })
-
-                                                                                                }
-                                                                                            });
-                                                                                        }
-                                                                                    });
-                                                                                } else {
-                                                                                    return response.status(404).send({
-                                                                                        error: 'Recipe does not exist!'
-                                                                                    });
-                                                                                }
+                                                                                return response.status(404).send({
+                                                                                    error: 'Recipe does not exist!'
+                                                                                });
                                                                             }
-                                                                        });
+                                                                        }
+                                                                    });
 
                                                             }
                                                         });
@@ -252,6 +256,7 @@ const uploadImage = (request, response) => {
 
 const getImage = (request, response) => {
     logger.info("Get Image");
+    counter.image_get.inc();
     var recipe_id = request.params.recipeId;
     var image_id = request.params.imageId;
     if (recipe_id != null && image_id != null) {
@@ -300,6 +305,7 @@ const getImage = (request, response) => {
 }
 
 const deleteImage = (request, response) => {
+    counter.image_delete.inc();
     logger.info("Delete Image");
     var recipe_id = request.params.recipeId;
     var image_id = request.params.imageId;
@@ -343,66 +349,66 @@ const deleteImage = (request, response) => {
                                             });
                                         }
                                         console.log('File deleted successfully.');
-                                            console.log("Going to delete recipe_id");
-                                            redis.del(recipe_id);
-                                            console.log("deleted recipe_id");
-                                            database.query(
-                                                'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
+                                        console.log("Going to delete recipe_id");
+                                        redis.del(recipe_id);
+                                        console.log("deleted recipe_id");
+                                        database.query(
+                                            'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
                                 where recipe_id = $1', [recipe_id],
-                                                function (err, recipeResult) {
-                                                    if (err) {
-                                                        logger.error(err);
-                                                        return response.status(500).send({
-                                                            error: 'Error getting recipe'
+                                            function (err, recipeResult) {
+                                                if (err) {
+                                                    logger.error(err);
+                                                    return response.status(500).send({
+                                                        error: 'Error getting recipe'
+                                                    });
+                                                } else {
+                                                    if (recipeResult.rows.length > 0) {
+                                                        recipeResult.rows[0].ingredients = JSON.parse(recipeResult.rows[0].ingredients);
+                                                        database.query("select position, instruction from orderedlist where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultSteps) {
+                                                            if (err) {
+                                                                logger.error(err);
+                                                                return response.status(500).send({
+                                                                    error: 'Error getting recipe'
+                                                                });
+                                                            } else {
+                                                                database.query("select calories, cholesterol_in_mg, sodium_in_mg, carbohydrates_in_grams, protein_in_grams from nutrition where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultNutrition) {
+                                                                    if (err) {
+                                                                        logger.error(err);
+                                                                        return response.status(500).send({
+                                                                            error: 'Error getting recipe'
+                                                                        });
+                                                                    } else {
+                                                                        database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
+                                                                            if (err) {
+                                                                                logger.error(err);
+                                                                                return response.status(500).send({
+                                                                                    error: 'Error getting images data'
+                                                                                });
+                                                                            }
+                                                                            let redis_json = {
+                                                                                image: imageResult.rows,
+                                                                                info: recipeResult.rows[0],
+                                                                                steps: resultSteps.rows,
+                                                                                nutrition_information: resultNutrition.rows[0]
+                                                                            }
+                                                                            console.log("got the data");
+                                                                            const final_result = JSON.stringify(redis_json);
+                                                                            redis.set(recipe_id, final_result, "EX", 600);
+                                                                            return response.status(204).end();
+
+                                                                        })
+
+                                                                    }
+                                                                });
+                                                            }
                                                         });
                                                     } else {
-                                                        if (recipeResult.rows.length > 0) {
-                                                            recipeResult.rows[0].ingredients = JSON.parse(recipeResult.rows[0].ingredients);
-                                                            database.query("select position, instruction from orderedlist where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultSteps) {
-                                                                if (err) {
-                                                                    logger.error(err);
-                                                                    return response.status(500).send({
-                                                                        error: 'Error getting recipe'
-                                                                    });
-                                                                } else {
-                                                                    database.query("select calories, cholesterol_in_mg, sodium_in_mg, carbohydrates_in_grams, protein_in_grams from nutrition where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, resultNutrition) {
-                                                                        if (err) {
-                                                                            logger.error(err);
-                                                                            return response.status(500).send({
-                                                                                error: 'Error getting recipe'
-                                                                            });
-                                                                        } else {
-                                                                            database.query("select id,url from images where recipe_id = $1", [recipeResult.rows[0].recipe_id], function (err, imageResult) {
-                                                                                if (err) {
-                                                                                    logger.error(err);
-                                                                                    return response.status(500).send({
-                                                                                        error: 'Error getting images data'
-                                                                                    });
-                                                                                }
-                                                                                let redis_json = {
-                                                                                    image: imageResult.rows,
-                                                                                    info: recipeResult.rows[0],
-                                                                                    steps: resultSteps.rows,
-                                                                                    nutrition_information: resultNutrition.rows[0]
-                                                                                }
-                                                                                console.log("got the data");
-                                                                                const final_result = JSON.stringify(redis_json);
-                                                                                redis.set(recipe_id, final_result, "EX", 600);
-                                                                                return response.status(204).end();
-
-                                                                            })
-
-                                                                        }
-                                                                    });
-                                                                }
-                                                            });
-                                                        } else {
-                                                            return response.status(404).send({
-                                                                error: 'Recipe does not exist!'
-                                                            });
-                                                        }
+                                                        return response.status(404).send({
+                                                            error: 'Recipe does not exist!'
+                                                        });
                                                     }
-                                                });
+                                                }
+                                            });
 
 
 

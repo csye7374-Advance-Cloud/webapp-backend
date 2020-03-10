@@ -4,7 +4,9 @@ const db = require('../db');
 const validator = new Validator();
 const uuidv1 = require('uuid/v1');
 const database = db.connection;
-const logger = require('../../config/winston')
+const logger = require('../../config/winston');
+var counter = require('./metrics');
+
 
 var authPromise = function (req) {
     return new Promise(function (resolve, reject) {
@@ -61,6 +63,7 @@ var authPromise = function (req) {
 
 const createUser = (request, response) => {
     logger.info("User Register Call");
+    counter.user_created.inc();
     const {
         emailaddress,
         password,
@@ -111,6 +114,7 @@ const createUser = (request, response) => {
 
 const updateUser = (request, response) => {
     logger.info("User update Call");
+    counter.user_update.inc();
     authPromise(request).then(
 
         function (user) {
@@ -195,6 +199,7 @@ const updateUser = (request, response) => {
 
 const getUser = (request, response) => {
     logger.info("User GET Call");
+    counter.user_get.inc();
     authPromise(request).then(
         function (user) {
             // console.log(user);
