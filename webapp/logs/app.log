@@ -1984,3 +1984,35 @@ ReferenceError: user_delete is not defined
     at Module.require (internal/modules/cjs/loader.js:692:17)
     at require (internal/modules/cjs/helpers.js:25:18)
     at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/api.js:8:15)
+TIMESTAMP: 2020-03-10T18:59:25.387Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+TypeError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+[0m [90m 27 | [39m    region[33m:[39m [33mREGION[39m
+ [90m 28 | [39m})[33m;[39m
+[31m[1m>[22m[39m[90m 29 | [39m[36mconst[39m redis [33m=[39m [36mnew[39m [33mRedis[39m({
+ [90m    | [39m      [31m[1m^[22m[39m
+ [90m 30 | [39m    sentinels[33m:[39m [
+ [90m 31 | [39m        { host[33m:[39m [33mREDIS_SENTINEL_HOSTNAME[39m[33m,[39m port[33m:[39m [33mREDIS_SENTINEL_PORT[39m }
+ [90m 32 | [39m    ][33m,[39m[0m
+    at File.buildCodeFrameError (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:427:15)
+    at Scope.checkBlockScopedCollisions (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:398:27)
+    at Scope.registerBinding (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:592:16)
+    at Scope.registerDeclaration (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:496:14)
+    at Object.BlockScoped (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:244:28)
+    at Object.newFn (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/visitors.js:318:17)
+    at NodePath._call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:76:18)
+    at NodePath.call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:44:14)
+    at NodePath.visit (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:105:12)
+    at TraversalContext.visitQueue (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/context.js:150:16)
+TIMESTAMP: 2020-03-10T19:02:05.911Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:39:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-10T19:03:04.529Z, LEVEL:  info, MESSAGE: 	create recipe call

@@ -11,7 +11,7 @@ const logger = require('../../config/winston');
 const Redis = require("ioredis");
 const rec = require("./recipe");
 var counter = require('./metrics');
-//const redis = new Redis();
+const redis = new Redis();
 
 
 
@@ -33,14 +33,14 @@ AWS.config.update({
     region: REGION
 });
 
-const redis = new Redis({
-    sentinels: [
-        { host: REDIS_SENTINEL_HOSTNAME, port: REDIS_SENTINEL_PORT }
-    ],
-    name: REDIS_MASTERNAME,
-    password: REDIS_PASSWORD,
-    sentinelPassword: REDIS_PASSWORD
-});
+// const redis = new Redis({
+//     sentinels: [
+//         { host: REDIS_SENTINEL_HOSTNAME, port: REDIS_SENTINEL_PORT }
+//     ],
+//     name: REDIS_MASTERNAME,
+//     password: REDIS_PASSWORD,
+//     sentinelPassword: REDIS_PASSWORD
+// });
 
 console.log("Bucket Name:", S3_BUCKET_NAME);
 const ACCEPTABLE_FILE_FORMATS = ['image/jpeg', 'image/png', 'image/jpg'];

@@ -8,7 +8,7 @@ const AWS = require('aws-sdk');
 const dotenv = require('dotenv');
 const Redis = require("ioredis");
 var counter = require('./metrics');
-//const redis = new Redis();
+const redis = new Redis();
 dotenv.config();
 const {
     S3_BUCKET_NAME,
@@ -26,14 +26,14 @@ AWS.config.update({
     secretAccessKey: SECRET_KEY,
     region: REGION
 });
-const redis = new Redis({
-    sentinels: [
-        { host: REDIS_SENTINEL_HOSTNAME, port: REDIS_SENTINEL_PORT }
-    ],
-    name: REDIS_MASTERNAME,
-    password: REDIS_PASSWORD,
-    sentinelPassword: REDIS_PASSWORD
-});
+// const redis = new Redis({
+//     sentinels: [
+//         { host: REDIS_SENTINEL_HOSTNAME, port: REDIS_SENTINEL_PORT }
+//     ],
+//     name: REDIS_MASTERNAME,
+//     password: REDIS_PASSWORD,
+//     sentinelPassword: REDIS_PASSWORD
+// });
 
 var s3 = new AWS.S3();
 const createRecipe = (request, response) => {
