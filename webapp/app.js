@@ -9,6 +9,9 @@ const logger = require('./config/winston');
 let cors = require('cors');
 const Redis = require("ioredis");
 //const redis = new Redis();
+
+var counter = require('./src/api/metrics');
+
 const apiMetrics = require('prometheus-api-metrics');
 app.use(apiMetrics());
 dotenv.config();
@@ -57,7 +60,7 @@ app.delete('/v1/recipe/:recipeId/image/:imageId', image.deleteImage);
 
 
 app.get('/howyoudoin', (request, response) => {
-  health.inc();
+  counter.health.inc();
   return response.status(200).send({
     message: 'all good'
   });

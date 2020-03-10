@@ -1,5 +1,10 @@
 const client = require('prom-client');
 
+var health = new client.Counter({
+    name: 'health',
+    help: 'health'
+});
+
 var recipe_create = new client.Counter({
     name: 'recipe_created',
     help: 'recipe'
@@ -56,7 +61,8 @@ const user_update = new client.Counter({
 module.exports = {
     recipe_create, recipe_get, recipe_update, recipe_delete,
     image_upload, image_get, image_delete,
-    user_created, user_get, user_update
+    user_created, user_get, user_update,
+    health
 
 };
 
