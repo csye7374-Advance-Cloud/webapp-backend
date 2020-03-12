@@ -8,7 +8,7 @@ const dotenv = require('dotenv');
 const logger = require('./config/winston');
 let cors = require('cors');
 const Redis = require("ioredis");
-const redis = new Redis();
+//const redis = new Redis();
 
 var counter = require('./src/api/metrics');
 
