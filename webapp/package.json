@@ -25,6 +25,8 @@
     "pg": "^7.12.1",
     "pg-format": "^1.0.4",
     "pg-promise": "^9.2.1",
+    "prom-client": "^12.0.0",
+    "prometheus-api-metrics": "^2.2.3",
     "redis": "^3.0.2",
     "regex": "^0.1.1",
     "request": "^2.88.2",

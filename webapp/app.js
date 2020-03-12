@@ -9,6 +9,11 @@ const logger = require('./config/winston');
 let cors = require('cors');
 const Redis = require("ioredis");
 //const redis = new Redis();
+
+var counter = require('./src/api/metrics');
+
+const apiMetrics = require('prometheus-api-metrics');
+app.use(apiMetrics());
 dotenv.config();
 
 
@@ -24,9 +29,9 @@ const {
 app.use(cors());
 app.use(bodyParser.json());
 app.use(
-    bodyParser.urlencoded({
-      extended: true,
-    })
+  bodyParser.urlencoded({
+    extended: true,
+  })
 );
 
 
@@ -55,6 +60,7 @@ app.delete('/v1/recipe/:recipeId/image/:imageId', image.deleteImage);
 
 
 app.get('/howyoudoin', (request, response) => {
+  counter.health.inc();
   return response.status(200).send({
     message: 'all good'
   });
@@ -64,14 +70,14 @@ app.get('/redisLivenessCheck', (request, response) => {
 
   const redis = new Redis({
     sentinels: [
-      { host: REDIS_SENTINEL_HOSTNAME , port: REDIS_SENTINEL_PORT }
+      { host: REDIS_SENTINEL_HOSTNAME, port: REDIS_SENTINEL_PORT }
     ],
     name: REDIS_MASTERNAME,
     password: REDIS_PASSWORD,
     sentinelPassword: REDIS_PASSWORD
   });
 
-  redis.on('connect',function(){
+  redis.on('connect', function () {
     console.log("Redis Connected Successfully");
     redis.set('testkey', 'testvalue');
     console.log("Successfully added test key to Redis cache");
@@ -84,9 +90,9 @@ app.get('/redisLivenessCheck', (request, response) => {
 
   });
 
-    redis.on('error',function(err){
-      console.log('Redis Exception:', err);
-    });
+  redis.on('error', function (err) {
+    console.log('Redis Exception:', err);
+  });
 });
 
 module.exports = app;
