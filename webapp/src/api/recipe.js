@@ -737,7 +737,7 @@ const getNewRecipe = (request, response) => {
 
 const getAllRecipes = (request, response) => {
     logger.info("get all recipes call");
-    counter.recipe_get.inc();
+    metrics.recipe_get.inc();
     let start = Date.now();
     database.query(
         'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
