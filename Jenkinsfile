@@ -38,20 +38,20 @@ node {
                 credentialsId: githubCredential,
                 url: "${env.helmchart_repo}"
                )
-          sh "git config --global user.email 'patil.yo@husky.neu.edu'"
+          sh "git config --global user.email ${env.email}"
           sh "git config --global user.name 'test'"
           sh 'git config --global push.default current'
           echo "${BUILD_NUMBER}"
           sh "pwd"
           sh "ls"
-          updatedVersion= nextVersionFromGit('patch')
+          updatedVersion= nextVersionFromGit("${env.releaseType}")
           echo "UpdatedVersion"+ updatedVersion
           sh "yq r ./back-end/Chart.yaml version"
           sh "yq w -i ./back-end/Chart.yaml 'version' ${updatedVersion}"
           sh "yq r back-end/Chart.yaml version"
           sh "yq w -i ./back-end/values.yaml 'image.repository' ${env.registry}:$commit_id"
           sh('git add --all')
-          sh "git commit -m 'Version bump ${updatedVersion}'"
+          sh "git commit -m 'Backend Updated with version ${updatedVersion}'"
           sh ('git push origin')
 
        }
