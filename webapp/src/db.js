@@ -15,7 +15,7 @@ const {
     RDS_CONNECTION_STRING
 } = process.env;
 
-// const connectionString = process.env.DATABASE_URL || `postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_SCHEMA}`;
+//const connectionString = process.env.DATABASE_URL || `postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_PORT}/${DB_SCHEMA}`;
 
 const connectionString = process.env.DATABASE_URL || `postgres://${RDS_USER_NAME}:${RDS_PASSWORD}@${RDS_CONNECTION_STRING}:5432/${RDS_DB_NAME}`;
 console.log(connectionString);

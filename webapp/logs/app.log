@@ -1286,3 +1286,733 @@ TIMESTAMP: 2020-02-27T23:19:28.152Z, LEVEL:  info, MESSAGE: 	get recipe call
 TIMESTAMP: 2020-02-27T23:19:31.562Z, LEVEL:  info, MESSAGE: 	update recipe call
 TIMESTAMP: 2020-02-27T23:19:31.863Z, LEVEL:  info, MESSAGE: 	get recipe call
 TIMESTAMP: 2020-02-27T23:19:42.819Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-03-09T20:51:20.521Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot find module 'prom-client'
+Error: Cannot find module 'prom-client'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/api.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-09T20:53:26.488Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot find module 'prom-client'
+Error: Cannot find module 'prom-client'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/api.js:8:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-09T20:58:51.058Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:50:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-09T20:59:58.196Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:50:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-09T21:03:11.169Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:50:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-09T21:13:40.232Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:48:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-09T21:14:49.633Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:48:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-09T21:15:28.594Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:48:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-09T21:15:59.655Z, LEVEL:  info, MESSAGE: 	User Register Call
+TIMESTAMP: 2020-03-09T21:16:00.193Z, LEVEL:  error, MESSAGE: 	duplicate key value violates unique constraint "appusers_emailaddress_key"
+TIMESTAMP: 2020-03-09T21:18:49.781Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T21:18:52.272Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T21:24:32.013Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T21:30:37.669Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T21:30:40.099Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T21:31:12.583Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-03-09T21:32:52.044Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-03-09T21:33:14.039Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-03-09T21:57:43.941Z, LEVEL:  info, MESSAGE: 	get recipe call
+TIMESTAMP: 2020-03-09T22:56:53.262Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T22:56:57.109Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:04:51.271Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:04:53.119Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:09:25.189Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot find module 'prometheus-api-metrics'
+Error: Cannot find module 'prometheus-api-metrics'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:13:20)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-09T23:11:33.239Z, LEVEL:  error, MESSAGE: 	uncaughtException: client is not defined
+ReferenceError: client is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:15:16)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:831:12)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-cli/lib/_babel-node.js:154:22)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+TIMESTAMP: 2020-03-09T23:13:13.888Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:14:33.953Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:15:51.891Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:12:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:5:16)
+TIMESTAMP: 2020-03-09T23:16:08.107Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:12:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:5:16)
+TIMESTAMP: 2020-03-09T23:16:35.490Z, LEVEL:  error, MESSAGE: 	uncaughtException: recipe is not defined
+ReferenceError: recipe is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:12:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:5:16)
+TIMESTAMP: 2020-03-09T23:17:25.233Z, LEVEL:  error, MESSAGE: 	uncaughtException: recipe is not defined
+ReferenceError: recipe is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:12:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:5:16)
+TIMESTAMP: 2020-03-09T23:17:58.398Z, LEVEL:  error, MESSAGE: 	uncaughtException: recipe is not defined
+ReferenceError: recipe is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:12:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:5:16)
+TIMESTAMP: 2020-03-09T23:18:13.433Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:15:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:6:15)
+TIMESTAMP: 2020-03-09T23:18:34.852Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:15:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:6:15)
+TIMESTAMP: 2020-03-09T23:20:49.819Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:15:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:6:15)
+TIMESTAMP: 2020-03-09T23:22:13.971Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:17)
+TIMESTAMP: 2020-03-09T23:22:14.318Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:17)
+TIMESTAMP: 2020-03-09T23:24:07.537Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:17)
+TIMESTAMP: 2020-03-09T23:25:37.213Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:17)
+TIMESTAMP: 2020-03-09T23:25:57.078Z, LEVEL:  error, MESSAGE: 	uncaughtException: Cannot find module '../metrics'
+Error: Cannot find module '../metrics'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:17)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-09T23:26:45.636Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:17)
+TIMESTAMP: 2020-03-09T23:26:50.010Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:26:57.254Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:27:46.112Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:31:06.396Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:31:29.022Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:32:14.556Z, LEVEL:  error, MESSAGE: 	uncaughtException: metrics is not defined
+ReferenceError: metrics is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:33:55.849Z, LEVEL:  error, MESSAGE: 	uncaughtException: metrics is not defined
+ReferenceError: metrics is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:34:00.218Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:34:15.104Z, LEVEL:  error, MESSAGE: 	uncaughtException: metrics is not defined
+ReferenceError: metrics is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:34:25.516Z, LEVEL:  error, MESSAGE: 	uncaughtException: metrics is not defined
+ReferenceError: metrics is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:34:59.147Z, LEVEL:  error, MESSAGE: 	uncaughtException: metrics is not defined
+ReferenceError: metrics is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:35:06.023Z, LEVEL:  error, MESSAGE: 	uncaughtException: app is not defined
+ReferenceError: app is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:2:1)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:36:49.894Z, LEVEL:  error, MESSAGE: 	uncaughtException: app.use is not a function
+TypeError: app.use is not a function
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:3:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:49:48.756Z, LEVEL:  error, MESSAGE: 	uncaughtException: app.use is not a function
+TypeError: app.use is not a function
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:3:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:52:35.476Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:54:04.312Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:54:22.455Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:55:50.788Z, LEVEL:  error, MESSAGE: 	uncaughtException: metrics is not defined
+ReferenceError: metrics is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:22:18)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:10:15)
+TIMESTAMP: 2020-03-09T23:58:15.659Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-09T23:58:28.529Z, LEVEL:  info, MESSAGE: 	create recipe call
+TIMESTAMP: 2020-03-10T16:52:56.952Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+TypeError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+[0m [90m 30 | [39m    region[33m:[39m [33mREGION[39m
+ [90m 31 | [39m})[33m;[39m
+[31m[1m>[22m[39m[90m 32 | [39m[36mconst[39m redis [33m=[39m [36mnew[39m [33mRedis[39m({
+ [90m    | [39m      [31m[1m^[22m[39m
+ [90m 33 | [39m    sentinels[33m:[39m [
+ [90m 34 | [39m        { host[33m:[39m [33mREDIS_SENTINEL_HOSTNAME[39m[33m,[39m port[33m:[39m [33mREDIS_SENTINEL_PORT[39m }
+ [90m 35 | [39m    ][33m,[39m[0m
+    at File.buildCodeFrameError (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:427:15)
+    at Scope.checkBlockScopedCollisions (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:398:27)
+    at Scope.registerBinding (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:592:16)
+    at Scope.registerDeclaration (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:496:14)
+    at Object.BlockScoped (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:244:28)
+    at Object.newFn (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/visitors.js:318:17)
+    at NodePath._call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:76:18)
+    at NodePath.call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:44:14)
+    at NodePath.visit (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:105:12)
+    at TraversalContext.visitQueue (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/context.js:150:16)
+TIMESTAMP: 2020-03-10T16:53:09.693Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+TypeError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+[0m [90m 30 | [39m    region[33m:[39m [33mREGION[39m
+ [90m 31 | [39m})[33m;[39m
+[31m[1m>[22m[39m[90m 32 | [39m[36mconst[39m redis [33m=[39m [36mnew[39m [33mRedis[39m({
+ [90m    | [39m      [31m[1m^[22m[39m
+ [90m 33 | [39m    sentinels[33m:[39m [
+ [90m 34 | [39m        { host[33m:[39m [33mREDIS_SENTINEL_HOSTNAME[39m[33m,[39m port[33m:[39m [33mREDIS_SENTINEL_PORT[39m }
+ [90m 35 | [39m    ][33m,[39m[0m
+    at File.buildCodeFrameError (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:427:15)
+    at Scope.checkBlockScopedCollisions (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:398:27)
+    at Scope.registerBinding (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:592:16)
+    at Scope.registerDeclaration (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:496:14)
+    at Object.BlockScoped (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:244:28)
+    at Object.newFn (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/visitors.js:318:17)
+    at NodePath._call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:76:18)
+    at NodePath.call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:44:14)
+    at NodePath.visit (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:105:12)
+    at TraversalContext.visitQueue (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/context.js:150:16)
+TIMESTAMP: 2020-03-10T16:53:14.070Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+TypeError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+[0m [90m 30 | [39m    region[33m:[39m [33mREGION[39m
+ [90m 31 | [39m})[33m;[39m
+[31m[1m>[22m[39m[90m 32 | [39m[36mconst[39m redis [33m=[39m [36mnew[39m [33mRedis[39m({
+ [90m    | [39m      [31m[1m^[22m[39m
+ [90m 33 | [39m    sentinels[33m:[39m [
+ [90m 34 | [39m        { host[33m:[39m [33mREDIS_SENTINEL_HOSTNAME[39m[33m,[39m port[33m:[39m [33mREDIS_SENTINEL_PORT[39m }
+ [90m 35 | [39m    ][33m,[39m[0m
+    at File.buildCodeFrameError (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:427:15)
+    at Scope.checkBlockScopedCollisions (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:398:27)
+    at Scope.registerBinding (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:592:16)
+    at Scope.registerDeclaration (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:496:14)
+    at Object.BlockScoped (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:244:28)
+    at Object.newFn (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/visitors.js:318:17)
+    at NodePath._call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:76:18)
+    at NodePath.call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:44:14)
+    at NodePath.visit (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:105:12)
+    at TraversalContext.visitQueue (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/context.js:150:16)
+TIMESTAMP: 2020-03-10T16:53:21.789Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:29:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-10T16:53:36.816Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:29:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-10T16:55:03.116Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:29:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-10T16:55:17.070Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:29:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-10T16:55:33.602Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:29:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-10T16:55:50.139Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:29:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-10T16:55:56.092Z, LEVEL:  error, MESSAGE: 	uncaughtException: Requires the name of master.
+Error: Requires the name of master.
+    at new SentinelConnector (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/connectors/SentinelConnector/index.js:20:19)
+    at new Redis (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/ioredis/built/redis/index.js:129:26)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js:29:15)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+TIMESTAMP: 2020-03-10T16:57:23.937Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js: Duplicate declaration "redis"
+TypeError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js: Duplicate declaration "redis"
+[0m [90m 47 | [39m})[33m;[39m
+ [90m 48 | [39m
+[31m[1m>[22m[39m[90m 49 | [39m[36mconst[39m redis [33m=[39m [36mnew[39m [33mRedis[39m({
+ [90m    | [39m      [31m[1m^[22m[39m
+ [90m 50 | [39m    sentinels[33m:[39m [
+ [90m 51 | [39m        { host[33m:[39m [33mREDIS_SENTINEL_HOSTNAME[39m[33m,[39m port[33m:[39m [33mREDIS_SENTINEL_PORT[39m }
+ [90m 52 | [39m    ][33m,[39m[0m
+    at File.buildCodeFrameError (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:427:15)
+    at Scope.checkBlockScopedCollisions (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:398:27)
+    at Scope.registerBinding (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:592:16)
+    at Scope.registerDeclaration (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:496:14)
+    at Object.BlockScoped (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:244:28)
+    at Object.newFn (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/visitors.js:318:17)
+    at NodePath._call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:76:18)
+    at NodePath.call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:44:14)
+    at NodePath.visit (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:105:12)
+    at TraversalContext.visitQueue (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/context.js:150:16)
+TIMESTAMP: 2020-03-10T16:57:49.041Z, LEVEL:  error, MESSAGE: 	uncaughtException: A metric with the name image_upload has already been registered.
+Error: A metric with the name image_upload has already been registered.
+    at Registry.registerMetric (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/registry.js:76:10)
+    at Counter.config.registers.forEach.registryInstance (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/counter.js:64:21)
+    at Array.forEach (<anonymous>)
+    at new Counter (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/counter.js:63:20)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:16:22)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-10T16:58:07.280Z, LEVEL:  error, MESSAGE: 	uncaughtException: A metric with the name image_upload has already been registered.
+Error: A metric with the name image_upload has already been registered.
+    at Registry.registerMetric (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/registry.js:76:10)
+    at Counter.config.registers.forEach.registryInstance (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/counter.js:64:21)
+    at Array.forEach (<anonymous>)
+    at new Counter (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/counter.js:63:20)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/image.js:16:22)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-10T17:02:03.716Z, LEVEL:  error, MESSAGE: 	uncaughtException: A metric with the name User_created has already been registered.
+Error: A metric with the name User_created has already been registered.
+    at Registry.registerMetric (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/registry.js:76:10)
+    at Counter.config.registers.forEach.registryInstance (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/counter.js:64:21)
+    at Array.forEach (<anonymous>)
+    at new Counter (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/prom-client/lib/counter.js:63:20)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:39:22)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-10T17:04:05.487Z, LEVEL:  error, MESSAGE: 	uncaughtException: user_delete is not defined
+ReferenceError: user_delete is not defined
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/metrics.js:59:29)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/api.js:8:15)
+TIMESTAMP: 2020-03-10T18:59:25.387Z, LEVEL:  error, MESSAGE: 	uncaughtException: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+TypeError: /home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/src/api/recipe.js: Duplicate declaration "redis"
+[0m [90m 27 | [39m    region[33m:[39m [33mREGION[39m
+ [90m 28 | [39m})[33m;[39m
+[31m[1m>[22m[39m[90m 29 | [39m[36mconst[39m redis [33m=[39m [36mnew[39m [33mRedis[39m({
+ [90m    | [39m      [31m[1m^[22m[39m
+ [90m 30 | [39m    sentinels[33m:[39m [
+ [90m 31 | [39m        { host[33m:[39m [33mREDIS_SENTINEL_HOSTNAME[39m[33m,[39m port[33m:[39m [33mREDIS_SENTINEL_PORT[39m }
+ [90m 32 | [39m    ][33m,[39m[0m
+    at File.buildCodeFrameError (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-core/lib/transformation/file/index.js:427:15)
+    at Scope.checkBlockScopedCollisions (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:398:27)
+    at Scope.registerBinding (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:592:16)
+    at Scope.registerDeclaration (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:496:14)
+    at Object.BlockScoped (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/scope/index.js:244:28)
+    at Object.newFn (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/visitors.js:318:17)
+    at NodePath._call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:76:18)
+    at NodePath.call (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:44:14)
+    at NodePath.visit (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/path/context.js:105:12)
+    at TraversalContext.visitQueue (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-traverse/lib/context.js:150:16)
+TIMESTAMP: 2020-03-10T19:02:05.911Z, LEVEL:  error, MESSAGE: 	uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1279:14)
+    at listenInCluster (net.js:1327:12)
+    at Server.listen (net.js:1414:7)
+    at Function.listen (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/express/lib/application.js:618:24)
+    at Object.<anonymous> (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/app.js:39:5)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at loader (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:144:5)
+    at Object.require.extensions.(anonymous function) [as .js] (/home/prajesh/Documents/Advance Cloud/WebApp/webapp-backend/webapp/node_modules/babel-register/lib/node.js:154:7)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+TIMESTAMP: 2020-03-10T19:03:04.529Z, LEVEL:  info, MESSAGE: 	create recipe call

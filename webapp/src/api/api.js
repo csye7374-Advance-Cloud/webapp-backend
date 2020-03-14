@@ -4,7 +4,9 @@ const db = require('../db');
 const validator = new Validator();
 const uuidv1 = require('uuid/v1');
 const database = db.connection;
-const logger = require('../../config/winston')
+const logger = require('../../config/winston');
+var metrics = require('./metrics');
+
 
 var authPromise = function (req) {
     return new Promise(function (resolve, reject) {
@@ -24,7 +26,7 @@ var authPromise = function (req) {
             if (username != "" && password != "") {
                 let start = Date.now();
                 database.query(
-                    `SELECT * from appusers where emailaddress = $1`, [username],
+                        `SELECT * from appusers where emailaddress = $1`, [username],
                     function (err, result) {
                         if (err) {
                             reject({
@@ -61,6 +63,8 @@ var authPromise = function (req) {
 
 const createUser = (request, response) => {
     logger.info("User Register Call");
+    metrics.user_created.inc();
+    let start = Date.now();
     const {
         emailaddress,
         password,
@@ -105,12 +109,16 @@ const createUser = (request, response) => {
             })
         }
     });
-
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramUserCreated.observe(elapsed);
 
 }
 
 const updateUser = (request, response) => {
     logger.info("User update Call");
+    metrics.user_update.inc();
+    let start = Date.now();
     authPromise(request).then(
 
         function (user) {
@@ -191,10 +199,15 @@ const updateUser = (request, response) => {
             response.status(401).send(err);
         }
     );
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramUserUpdated.observe(elapsed);
 }
 
 const getUser = (request, response) => {
     logger.info("User GET Call");
+    metrics.user_get.inc();
+    let start = Date.now();
     authPromise(request).then(
         function (user) {
             // console.log(user);
@@ -218,6 +231,9 @@ const getUser = (request, response) => {
             response.status(401).send(err);
         }
     );
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramUserGet.observe(elapsed);
 }
 
 module.exports = {
