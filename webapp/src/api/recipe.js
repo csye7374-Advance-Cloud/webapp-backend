@@ -7,7 +7,7 @@ const logger = require('../../config/winston');
 const AWS = require('aws-sdk');
 const dotenv = require('dotenv');
 const Redis = require("ioredis");
-var counter = require('./metrics');
+var metrics = require('./metrics');
 //const redis = new Redis();
 dotenv.config();
 const {
@@ -38,7 +38,7 @@ const redis = new Redis({
 var s3 = new AWS.S3();
 const createRecipe = (request, response) => {
     logger.info("create recipe call");
-    counter.recipe_create.inc();
+    metrics.recipe_create.inc();
     let start = Date.now();
     const {
         cook_time_in_min,
@@ -158,13 +158,14 @@ const createRecipe = (request, response) => {
     }
     let end = Date.now();
     var elapsed = end - start;
+    metrics.histogramRecipeCreated.observe(elapsed);
 }
 
 const deleteRecipe = (request, response) => {
     let id = request.params.recipeId;
     logger.info("delete recipe call");
-    counter.recipe_delete.inc();
-    recipe_delete.inc();
+    metrics.recipe_delete.inc();
+    let start = Date.now();
     if (id != null) {
 
         console.log("inside del");
@@ -257,13 +258,16 @@ const deleteRecipe = (request, response) => {
             message: 'Missing Parameters. Bad Request'
         });
     }
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramRecipeDeleted.observe(elapsed);
 }
 
 
 const updateRecipe = (request, response) => {
     logger.info("update recipe call");
-    counter.recipe_update.inc();
-    recipe_update.inc();
+    metrics.recipe_update.inc();
+    let start = Date.now();
     var id = request.params.recipeId;
 
     const {
@@ -491,11 +495,15 @@ const updateRecipe = (request, response) => {
             info: 'Please enter all details'
         });
     }
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramRecipeUpdated.observe(elapsed);
 }
 
 const getRecipe = (request, response) => {
     logger.info("get recipe call");
-    counter.recipe_get.inc();
+    metrics.recipe_get.inc();
+    let start = Date.now();
     var id = request.params.recipeId;
     console.log("body ID:" + id);
 
@@ -660,11 +668,15 @@ const getRecipe = (request, response) => {
             error: 'Please enter the recipe id'
         });
     }
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramRecipeGet.observe(elapsed);
 }
 
 const getNewRecipe = (request, response) => {
     logger.info("get new recipe call");
-    counter.recipe_get.inc();
+    metrics.recipe_get.inc();
+    let start = Date.now();
     database.query(
         'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
        ORDER BY created_ts DESC LIMIT 1',
@@ -717,11 +729,16 @@ const getNewRecipe = (request, response) => {
                 }
             }
         });
+
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramRecipeGet.observe(elapsed);
 }
 
 const getAllRecipes = (request, response) => {
     logger.info("get all recipes call");
     counter.recipe_get.inc();
+    let start = Date.now();
     database.query(
         'SELECT recipe_id, created_ts, updated_ts, author_id, cook_time_in_min, prep_time_in_min, total_time_in_min, title, cusine, servings, ingredients from RECIPE \
        ORDER BY created_ts DESC',
@@ -773,6 +790,9 @@ const getAllRecipes = (request, response) => {
                 }
             }
         });
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramRecipeGet.observe(elapsed);
 }
 
 
