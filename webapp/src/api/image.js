@@ -9,8 +9,7 @@ const format = require('pg-format');
 const api = require('./api');
 const logger = require('../../config/winston');
 const Redis = require("ioredis");
-const rec = require("./recipe");
-var counter = require('./metrics');
+var metrics = require('./metrics');
 //const redis = new Redis();
 
 
@@ -61,7 +60,8 @@ var s3 = new AWS.S3();
 
 const uploadImage = (request, response) => {
     logger.info("Image Upload");
-    counter.image_upload.inc();
+    metrics.image_upload.inc();
+    let start = Date.now();
     var recipe_id = request.params.recipeId;
     // new code
     api.authPromise(request).then(
@@ -252,11 +252,15 @@ const uploadImage = (request, response) => {
             response.status(401).send(err);
         }
     );
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramImageUpload.observe(elapsed);
 }
 
 const getImage = (request, response) => {
     logger.info("Get Image");
-    counter.image_get.inc();
+    metrics.image_get.inc();
+    let start = Date.now();
     var recipe_id = request.params.recipeId;
     var image_id = request.params.imageId;
     if (recipe_id != null && image_id != null) {
@@ -302,11 +306,15 @@ const getImage = (request, response) => {
             info: 'Not found'
         });
     }
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramImageGet.observe(elapsed);
 }
 
 const deleteImage = (request, response) => {
-    counter.image_delete.inc();
+    metrics.image_delete.inc();
     logger.info("Delete Image");
+    let start = Date.now();
     var recipe_id = request.params.recipeId;
     var image_id = request.params.imageId;
     api.authPromise(request).then(
@@ -431,6 +439,9 @@ const deleteImage = (request, response) => {
             response.status(401).send(err);
         }
     );
+    let end = Date.now();
+    var elapsed = end - start;
+    metrics.histogramImageDelete.observe(elapsed);
 }
 
 
